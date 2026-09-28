@@ -142,22 +142,12 @@ export default function SavoirFairePage() {
     { type: "image" as const, src: "/savoir-faire/slider1/SavoirFaire_Maison_Valentino_03.jpg" },
   ];
 
-  const slider2Items = [
-    { type: "video" as const, src: "/savoir-faire/slider2/01_MKO_Fireflies.mp4" },
-    { type: "image" as const, src: "/savoir-faire/slider2/01_Show_Fireflies_Detail.jpg" },
-    { type: "image" as const, src: "/savoir-faire/slider2/02_Show_Fireflies_Detail.jpg" },
-    { type: "image" as const, src: "/savoir-faire/slider2/03_Show_Fireflies_Detail.jpg" },
-    { type: "image" as const, src: "/savoir-faire/slider2/04_Show_Fireflies_Detail.jpg" },
-    { type: "image" as const, src: "/savoir-faire/slider2/05_Show_Fireflies_Detail.jpg" },
-    { type: "image" as const, src: "/savoir-faire/slider2/06_Show_Fireflies_Detail.jpg" },
-  ];
-
   return (
     <div className="min-h-screen bg-white pt-20">
       {/* Section 1: Title + Subtitle */}
       <div className="px-10 pt-12 pb-4">
         <h1 className="font-serif text-[32px] leading-none text-black mb-1">The Savoir-Faire of Valentino</h1>
-        <p className="font-serif text-[20px] italic text-black">A celebration of storied techniques</p>
+        <p className="font-serif text-[20px] italic text-black">Where imagination takes form</p>
       </div>
 
       {/* Section 2: Text paragraph */}
@@ -190,30 +180,25 @@ export default function SavoirFairePage() {
         <Slider items={slider1Items} />
       </div>
 
-      {/* Section 6: Video */}
-      <div className="w-full">
-        <LazyVideo
-          src="/savoir-faire/03_Video_SavoirFaire.mp4"
-          className="w-full h-auto block"
-        />
-      </div>
-
-      {/* Section 7: Title + Subtitle */}
+      {/* Section 6: Title + Subtitle (The Hands Behind Valentino) */}
       <div className="px-10 pt-14 pb-4">
         <h2 className="font-serif text-[32px] leading-none text-black mb-1">The Hands Behind Valentino</h2>
         <p className="font-serif text-[20px] italic text-black">Where time becomes extraordinary</p>
       </div>
 
-      {/* Section 8: Text paragraph */}
+      {/* Section 7: Text paragraph */}
       <div className="px-10 pb-8">
         <p className="font-sans text-[10px] text-black leading-relaxed font-normal">
           Behind every creation are the remarkable people who bring it to life. Their knowledge, precision and sensitivity are expressed through countless hours of meticulous work, where every detail is considered and every gesture has purpose. From the most intricate embroidery to the construction of a silhouette, time becomes an essential part of every creation. It is this extraordinary dedication - passed from hand to hand and generation to generation - that gives each Valentino creation its singular character.
         </p>
       </div>
 
-      {/* Section 9: Slider 2 */}
-      <div className="pb-14">
-        <Slider items={slider2Items} />
+      {/* Section 8: Video, spostato sotto il 3o paragrafo (The Hands Behind Valentino) */}
+      <div className="w-full pb-14">
+        <LazyVideo
+          src="/savoir-faire/03_Video_SavoirFaire.mp4"
+          className="w-full h-auto block"
+        />
       </div>
 
       {/* px-10 per allinearsi ai blocchi di testo della pagina */}

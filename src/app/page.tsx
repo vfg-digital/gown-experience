@@ -472,7 +472,7 @@ function AccessOverlay({ onAccessGranted }: { onAccessGranted: (name: string) =>
         <img src="/valentino-reverie.svg" alt="Valentino Rêverie" className="h-20 md:h-24 lg:h-28 w-auto" />
       </h1>
 
-      <p className="font-serif text-xl md:text-3xl text-black/70 italic leading-snug mb-8 animate-fade-in-up animate-delay-800">
+      <p className="font-serif font-normal italic text-[20px] leading-[24px] tracking-[-0.03em] text-black/70 mb-8 animate-fade-in-up animate-delay-800">
         Step into a private world of Maison Valentino treasures, reserved for a select few.
         <br />
         Your exclusive access key awaits.
@@ -496,7 +496,7 @@ function AccessOverlay({ onAccessGranted }: { onAccessGranted: (name: string) =>
             // access-ink: stesso grigio dei pallini della chiave, cosi le due
             // righe hanno lo stesso peso visivo. Ad accesso accettato passa a
             // bianco luminoso insieme alla riga della chiave.
-            className={`w-56 md:w-64 font-serif italic text-lg bg-transparent border-0 border-b border-black/25 py-2 px-1 outline-none focus:border-black/50 transition-all placeholder:text-black/30 access-ink ${
+            className={`w-full font-serif italic text-lg bg-transparent border-0 border-b border-black/25 py-2 px-1 outline-none focus:border-black/50 transition-all placeholder:text-black/30 access-ink ${
               glowing ? "access-ink-glow" : ""
             }`}
             // 16px impedisce a Safari su iPhone di ingrandire la pagina al
@@ -507,19 +507,6 @@ function AccessOverlay({ onAccessGranted }: { onAccessGranted: (name: string) =>
             aria-label="Your name"
             placeholder="Your Name"
           />
-          <span
-            aria-hidden="true"
-            // Stesso colore, spessore di tratto e comportamento in luce della
-            // chiave, cosi le due righe sono coerenti.
-            className={`min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ${
-              glowing ? "text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.9)]" : "text-black/50"
-            }`}
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <rect x="2.5" y="5" width="19" height="14" rx="1.5" />
-              <path d="M3 6.5l9 6.5 9-6.5" />
-            </svg>
-          </span>
         </div>
 
         {/* Access key */}
@@ -536,26 +523,29 @@ function AccessOverlay({ onAccessGranted }: { onAccessGranted: (name: string) =>
             // La spaziatura larga si attiva solo quando c'e' del testo: cosi i
             // pallini restano distanziati come prima, ma la scritta segnaposto
             // in corsivo resta leggibile e non spaziata.
-            className={`w-56 md:w-64 font-serif italic text-lg bg-transparent border-0 border-b border-black/25 py-2 px-1 outline-none focus:border-black/50 transition-all placeholder:text-black/30 password-dots ${
+            className={`w-full font-serif italic text-lg bg-transparent border-0 border-b border-black/25 py-2 px-1 outline-none focus:border-black/50 transition-all placeholder:text-black/30 password-dots ${
               accessInput ? "tracking-[0.3em]" : ""
             } ${glowing ? "password-dots-glow" : ""}`}
             style={{ fontSize: "16px", WebkitTextSecurity: "disc" } as React.CSSProperties}
             autoComplete="off"
             aria-label="Access key"
-            placeholder="Access Key"
+            placeholder="Your Access Key"
           />
-          <button
-            type="submit"
-            className={`min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors rotate-90 ${
-              glowing ? "text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.9)]" : "text-black/50 hover:text-black/70"
-            }`}
-            aria-label="Enter"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
-            </svg>
-          </button>
         </div>
+
+        {/* CTA di invio. Sostituisce la vecchia icona-chiave: la logica di
+            submit e il tracking (gowns_login / gowns_login_ko) restano in
+            handleAccessSubmit, quindi le analitiche non cambiano. L'invio con
+            il tasto Invio continua a funzionare (form onSubmit). */}
+        <button
+          type="submit"
+          className={`w-full mt-8 min-h-[44px] py-3 flex items-center justify-center font-sans text-[13px] tracking-[0.15em] text-white/90 transition-colors ${
+            glowing ? "bg-[#252525]/75" : "bg-[#252525]/60 hover:bg-[#252525]/75"
+          }`}
+          aria-label="Enter"
+        >
+          Enter
+        </button>
 
         {error !== "none" && (
           <p
