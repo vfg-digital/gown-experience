@@ -7,13 +7,24 @@ interface HeaderProps {
   onGoToMenu: () => void;
   onGoToWishlist: () => void;
   onGoHome: () => void;
+  /**
+   * Se presente, a sinistra si mostra la freccia "back" (che chiama onBack)
+   * al posto del menu hamburger. Usata in Savoir-Faire, Gowns Closet e PDP.
+   */
+  onBack?: () => void;
   scrollContainer?: React.RefObject<HTMLDivElement | null>;
 }
+
+// Attributi condivisi da back e stella: stesso colore, peso, stroke e
+// strokeWidth, cosi le due icone dell'header sono identiche per tratto.
+const ICON_STROKE = "#000000";
+const ICON_STROKE_WIDTH = "1.4";
 
 export default function Header({
   onGoToMenu,
   onGoToWishlist,
   onGoHome,
+  onBack,
   scrollContainer,
 }: HeaderProps) {
   const { wishlist } = useWishlist();
@@ -48,27 +59,50 @@ export default function Header({
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* Hamburger menu - LEFT */}
-      <button
-        onClick={onGoToMenu}
-        className="min-w-[44px] min-h-[44px] flex items-center justify-center"
-        aria-label="Menu"
-      >
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#000000"
-          strokeWidth="1.4"
+      {/* LEFT: freccia "back" (Savoir-Faire, Gowns Closet, PDP) oppure il menu
+          hamburger dove non e' previsto il back (es. wishlist). */}
+      {onBack ? (
+        <button
+          onClick={onBack}
+          className="min-w-[44px] min-h-[44px] flex items-center justify-center"
+          aria-label="Back"
         >
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
-      </button>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke={ICON_STROKE}
+            strokeWidth={ICON_STROKE_WIDTH}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="11 18 5 12 11 6" />
+          </svg>
+        </button>
+      ) : (
+        <button
+          onClick={onGoToMenu}
+          className="min-w-[44px] min-h-[44px] flex items-center justify-center"
+          aria-label="Menu"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke={ICON_STROKE}
+            strokeWidth={ICON_STROKE_WIDTH}
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      )}
 
-      {/* Logo - CENTER */}
+      {/* Logo - CENTER (invariato: porta al menu principale) */}
       <button onClick={onGoHome} className="absolute left-1/2 -translate-x-1/2">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -78,18 +112,26 @@ export default function Header({
         />
       </button>
 
-      {/* Wishlist star - RIGHT */}
+      {/* RIGHT: stella wishlist. Stesso identico tratto della freccia back
+          (stessi viewBox, dimensioni, stroke e strokeWidth). Piena quando ci
+          sono preferiti, altrimenti solo contorno. */}
       <button
         onClick={onGoToWishlist}
         className="min-w-[44px] min-h-[44px] flex items-center justify-center"
         aria-label="Wishlist"
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={hasItems ? "/star-filled.svg" : "/star-outline.svg"}
-          alt="Wishlist"
-          className="w-[18px] h-[18px]"
-        />
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill={hasItems ? ICON_STROKE : "none"}
+          stroke={ICON_STROKE}
+          strokeWidth={ICON_STROKE_WIDTH}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        </svg>
       </button>
     </header>
   );

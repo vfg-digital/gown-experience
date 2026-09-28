@@ -241,6 +241,14 @@ export default function Home() {
     pushHistory("browsing", "gowns-book", "gowns-closet");
   }, [pushHistory]);
 
+  // Back dalla PDP: torna al Gowns Closet ancorando lo scroll alla creazione
+  // che si stava visualizzando (detailProductIndex), non a quella iniziale.
+  const handleBackToCloset = useCallback(() => {
+    setSelectedProductIndex(detailProductIndex);
+    setViewMode("gowns-closet");
+    pushHistory("browsing", "gowns-closet");
+  }, [detailProductIndex, pushHistory]);
+
   return (
     <main className="relative">
       {/* Header - visible when browsing */}
@@ -249,6 +257,16 @@ export default function Home() {
           onGoToMenu={handleGoToMenu}
           onGoToWishlist={handleGoToWishlist}
           onGoHome={handleGoHome}
+          // Back a sinistra su Savoir-Faire / Gowns Closet (-> menu) e su PDP
+          // (-> Gowns Closet, ancorato al prodotto). Sulla wishlist resta il
+          // menu hamburger (onBack assente).
+          onBack={
+            viewMode === "wishlist"
+              ? undefined
+              : viewMode === "gowns-book"
+              ? handleBackToCloset
+              : handleGoToMenu
+          }
           scrollContainer={scrollContainerRef}
         />
       )}
