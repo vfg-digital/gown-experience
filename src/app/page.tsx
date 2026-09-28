@@ -490,7 +490,7 @@ function AccessOverlay({ onAccessGranted }: { onAccessGranted: (name: string) =>
         <img src="/valentino-reverie.svg" alt="Valentino Rêverie" className="h-20 md:h-24 lg:h-28 w-auto" />
       </h1>
 
-      <p className="font-serif font-normal italic text-[20px] leading-[24px] tracking-[-0.03em] text-black/70 mb-8 animate-fade-in-up animate-delay-800">
+      <p className="font-serif font-normal italic text-[20px] leading-[25px] tracking-[-0.03em] text-black/70 mb-8 animate-fade-in-up animate-delay-800">
         Step into a private world of Maison Valentino treasures, reserved for a select few.
         <br />
         Your exclusive access key awaits.
@@ -557,7 +557,7 @@ function AccessOverlay({ onAccessGranted }: { onAccessGranted: (name: string) =>
             il tasto Invio continua a funzionare (form onSubmit). */}
         <button
           type="submit"
-          className={`w-full mt-8 min-h-[44px] py-3 flex items-center justify-center font-sans text-[13px] tracking-[0.15em] text-white/90 transition-colors ${
+          className={`w-full mt-8 min-h-[44px] py-3 flex items-center justify-center font-sans text-[12px] tracking-[0.15em] text-white/90 transition-colors ${
             glowing ? "bg-[#252525]/75" : "bg-[#252525]/60 hover:bg-[#252525]/75"
           }`}
           aria-label="Enter"

@@ -146,7 +146,7 @@ export default function SavoirFairePage() {
     <div className="min-h-screen bg-white pt-20">
       {/* Section 1: Title + Subtitle */}
       <div className="px-10 pt-12 pb-4">
-        <h1 className="font-serif text-[32px] leading-none text-black mb-1">The Savoir-Faire of Valentino</h1>
+        <h1 className="font-serif text-[24px] leading-none text-black mb-1">The Savoir-Faire of Valentino</h1>
         <p className="font-serif text-[20px] italic text-black">Where imagination takes form</p>
       </div>
 
@@ -181,8 +181,8 @@ export default function SavoirFairePage() {
       </div>
 
       {/* Section 6: Title + Subtitle (The Hands Behind Valentino) */}
-      <div className="px-10 pt-14 pb-4">
-        <h2 className="font-serif text-[32px] leading-none text-black mb-1">The Hands Behind Valentino</h2>
+      <div className="px-10 pt-8 pb-4">
+        <h2 className="font-serif text-[24px] leading-none text-black mb-1">The Hands Behind Valentino</h2>
         <p className="font-serif text-[20px] italic text-black">Where time becomes extraordinary</p>
       </div>
 

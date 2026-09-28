@@ -15,8 +15,7 @@ interface HeaderProps {
   scrollContainer?: React.RefObject<HTMLDivElement | null>;
 }
 
-// Attributi condivisi da back e stella: stesso colore, peso, stroke e
-// strokeWidth, cosi le due icone dell'header sono identiche per tratto.
+// Colore/peso delle icone a tratto dell'header (freccia back e hamburger).
 const ICON_STROKE = "#000000";
 const ICON_STROKE_WIDTH = "1.4";
 
@@ -112,26 +111,19 @@ export default function Header({
         />
       </button>
 
-      {/* RIGHT: stella wishlist. Stesso identico tratto della freccia back
-          (stessi viewBox, dimensioni, stroke e strokeWidth). Piena quando ci
-          sono preferiti, altrimenti solo contorno. */}
+      {/* RIGHT: stella wishlist, icona originale della Maison (stessi file SVG
+          usati nella PDP). Piena quando ci sono preferiti, altrimenti contorno. */}
       <button
         onClick={onGoToWishlist}
         className="min-w-[44px] min-h-[44px] flex items-center justify-center"
         aria-label="Wishlist"
       >
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill={hasItems ? ICON_STROKE : "none"}
-          stroke={ICON_STROKE}
-          strokeWidth={ICON_STROKE_WIDTH}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-        </svg>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={hasItems ? "/star-filled.svg" : "/star-outline.svg"}
+          alt="Wishlist"
+          className="w-[18px] h-[18px]"
+        />
       </button>
     </header>
   );
