@@ -1,0 +1,1256 @@
+﻿export interface Product {
+  sku: string;
+  description: string;
+  colorDesc: string;
+  sizes: string[];
+  preshootImages: string[];
+  ecommImages: string[];
+  detailImage: string | null;
+}
+
+export const products: Product[] = [
+
+  {
+    sku: "8BMVDN402UPCVR",
+    description: "Abito lungo ricamato in chiffon",
+    colorDesc: "Nude/gold",
+    sizes: ["40", "42", "52"],
+    preshootImages: ["/images/8BMVDN402UPCVR-preshooting-8BMVDN402UPCVRRf.jpg", "/images/8BMVDN402UPCVR-preshooting-8BMVDN402UPCVRRb.jpg", "/images/8BMVDN402UPCVR-preshooting-8BMVDN402UPCVRRs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B0VDNG01EDMNQ",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Rose beige/silver",
+    sizes: ["40", "42", "44", "46", "48", "50", "52"],
+    preshootImages: ["/images/8B0VDNG01EDMNQ-preshooting-8B0VDNG01EDMNQRf.jpg", "/images/8B0VDNG01EDMNQ-preshooting-8B0VDNG01EDMNQRb.jpg", "/images/8B0VDNG01EDMNQ-preshooting-8B0VDNG01EDMNQRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/8B0VDNG01EDMNQ-preshooting-8B0VDNG01EDMNQRd.jpg",
+  },
+
+  {
+    sku: "8B3VDMS01MHK92",
+    description: "Abito lungo ricamato in georgette",
+    colorDesc: "Nero+multicolor",
+    sizes: ["38", "40", "42", "44", "48"],
+    preshootImages: ["/images/8B3VDMS01MHK92-preshooting-8B3VDMS01MHK92Rf.jpg", "/images/8B3VDMS01MHK92-preshooting-8B3VDMS01MHK92Rb.jpg"],
+    ecommImages: ["/images/8B3VDMS01MHK92-ecommerce-8B3VDMS01MHK92B.jpg", "/images/8B3VDMS01MHK92-ecommerce-8B3VDMS01MHK92F.jpg", "/images/8B3VDMS01MHK92-ecommerce-8B3VDMS01MHK92L.jpg", "/images/8B3VDMS01MHK92-ecommerce-8B3VDMS01MHK92R.jpg", "/images/8B3VDMS01MHK92-ecommerce-8B3VDMS01MHK92S.jpg", "/images/8B3VDMS01MHK92-ecommerce-8B3VDMS01MHK92T.jpg"],
+    detailImage: "/images/8B3VDMS01MHK92-ecommerce-8B3VDMS01MHK92U.jpg",
+  },
+
+  {
+    sku: "8B3VDMZ51EDK92",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Nero+multicolor",
+    sizes: ["38", "40", "42", "44", "46", "50", "52"],
+    preshootImages: ["/images/8B3VDMZ51EDK92-preshooting-8B3VDMZ51EDK92Rf.jpg", "/images/8B3VDMZ51EDK92-preshooting-8B3VDMZ51EDK92Rb.jpg", "/images/8B3VDMZ51EDK92-preshooting-8B3VDMZ51EDK92Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B3VDMY02UPR5F",
+    description: "Gown in chiffon",
+    colorDesc: "Dirty sage",
+    sizes: ["36", "38", "40", "42", "44", "46"],
+    preshootImages: ["/images/8B3VDMY02UPR5F-preshooting-8B3VDMY02UPR5FRf.jpg", "/images/8B3VDMY02UPR5F-preshooting-8B3VDMY02UPR5FRb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "XB0VDDF51EDB72",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Praline/green",
+    sizes: ["38", "40"],
+    preshootImages: ["/images/XB0VDDF51EDB72-preshooting-XB0VDDF51EDB72Rf.jpg", "/images/XB0VDDF51EDB72-preshooting-XB0VDDF51EDB72Rb.jpg", "/images/XB0VDDF51EDB72-preshooting-XB0VDDF51EDB72Rs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/XB0VDDF51EDB72-preshooting-XB0VDDF51EDB72Rd.jpg",
+  },
+
+  {
+    sku: "8B3VDLG01CFCJD",
+    description: "Abito lungo ricamato in crepe couture",
+    colorDesc: "Astral purple/nero",
+    sizes: ["40", "44", "46", "48", "50", "52"],
+    preshootImages: ["/images/8B3VDLG01CFCJD-preshooting-8B3VDLG01CFCJDRf.jpg", "/images/8B3VDLG01CFCJD-preshooting-8B3VDLG01CFCJDRb.jpg"],
+    ecommImages: ["/images/8B3VDLG01CFCJD-ecommerce-8B3VDLG01CFCJDF.jpg"],
+    detailImage: "/images/8B3VDLG01CFCJD-ecommerce-8B3VDLG01CFCJDD.jpg",
+  },
+
+  {
+    sku: "8B0VDNE02UPF7J",
+    description: "Abito lunro ricamato in chiffon",
+    colorDesc: "Mauve/dirty sage",
+    sizes: ["40", "48"],
+    preshootImages: ["/images/8B0VDNE02UPF7J-preshooting-8B0VDNE02UPF7JRf.jpg", "/images/8B0VDNE02UPF7J-preshooting-8B0VDNE02UPF7JRb.jpg", "/images/8B0VDNE02UPF7J-preshooting-8B0VDNE02UPF7JRs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B0VDN37A6Y4K5",
+    description: "Abito lungo in pizzo",
+    colorDesc: "Blue/gold",
+    sizes: ["36", "38", "40", "42", "44", "46"],
+    preshootImages: ["/images/8B0VDN37A6Y4K5-preshooting-8B0VDN37A6Y4K5Rf.jpg", "/images/8B0VDN37A6Y4K5-preshooting-8B0VDN37A6Y4K5Rb.jpg", "/images/8B0VDN37A6Y4K5-preshooting-8B0VDN37A6Y4K5Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B3VDMH51EDC1J",
+    description: "Abito lungo ricamato con piume in tulle illusione",
+    colorDesc: "Nero/blue/silver",
+    sizes: ["36", "38", "42"],
+    preshootImages: ["/images/8B3VDMH51EDC1J-preshooting-8B3VDMH51EDC1JRf.jpg", "/images/8B3VDMH51EDC1J-preshooting-8B3VDMH51EDC1JRb.jpg", "/images/8B3VDMH51EDC1J-preshooting-8B3VDMH51EDC1JRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/8B3VDMH51EDC1J-preshooting-8B3VDMH51EDC1JRd.jpg",
+  },
+
+  {
+    sku: "8B0VDN751EDCUZ",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Absolute rose/silver",
+    sizes: ["36", "42", "44", "46"],
+    preshootImages: ["/images/8B0VDN751EDCUZ-preshooting-8B0VDN751EDCUZRf.jpg", "/images/8B0VDN751EDCUZ-preshooting-8B0VDN751EDCUZRb.jpg"],
+    ecommImages: ["/images/8B0VDN751EDCUZ-ecommerce-8B0VDN751EDCUZB.jpg", "/images/8B0VDN751EDCUZ-ecommerce-8B0VDN751EDCUZF.jpg", "/images/8B0VDN751EDCUZ-ecommerce-8B0VDN751EDCUZL.jpg", "/images/8B0VDN751EDCUZ-ecommerce-8B0VDN751EDCUZS.jpg", "/images/8B0VDN751EDCUZ-ecommerce-8B0VDN751EDCUZT.jpg"],
+    detailImage: "/images/8B0VDN751EDCUZ-ecommerce-8B0VDN751EDCUZU.jpg",
+  },
+
+  {
+    sku: "8B3VDL701C8PS1",
+    description: "Abito lungo ricamato con piume in organza",
+    colorDesc: "Poudre/silver",
+    sizes: ["38", "42", "44", "48", "52"],
+    preshootImages: ["/images/8B3VDL701C8PS1-preshooting-8B3VDL701C8PS1Rf.jpg", "/images/8B3VDL701C8PS1-preshooting-8B3VDL701C8PS1Rb.jpg", "/images/8B3VDL701C8PS1-preshooting-8B3VDL701C8PS1Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B0VDNF01ED0NA",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Nero/avorio",
+    sizes: ["40", "42", "46", "52"],
+    preshootImages: ["/images/8B0VDNF01ED0NA-preshooting-8B0VDNF01ED0NARf.jpg", "/images/8B0VDNF01ED0NA-preshooting-8B0VDNF01ED0NARb.jpg", "/images/8B0VDNF01ED0NA-preshooting-8B0VDNF01ED0NARs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B3VDMM51ED9VF",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Rose beige/multicolor",
+    sizes: ["38", "40", "42", "46", "48", "50", "52"],
+    preshootImages: ["/images/8B3VDMM51ED9VF-preshooting-8B3VDMM51ED9VFRf.jpg", "/images/8B3VDMM51ED9VF-preshooting-8B3VDMM51ED9VFRb.jpg", "/images/8B3VDMM51ED9VF-preshooting-8B3VDMM51ED9VFRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/8B3VDMM51ED9VF-preshooting-8B3VDMM51ED9VFRd.jpg",
+  },
+
+  {
+    sku: "8B0VDNG51MMNUD",
+    description: "Abito lungo ricamato in cady couture",
+    colorDesc: "Nero/silver",
+    sizes: ["38", "40", "42", "44", "48"],
+    preshootImages: ["/images/8B0VDNG51MMNUD-preshooting-8B0VDNG51MMNUDRf.jpg", "/images/8B0VDNG51MMNUD-preshooting-8B0VDNG51MMNUDRb.jpg", "/images/8B0VDNG51MMNUD-preshooting-8B0VDNG51MMNUDRs.jpg"],
+    ecommImages: ["/images/8B0VDNG51MMNUD-ecommerce-8B0VDNG51MMNUDB.jpg", "/images/8B0VDNG51MMNUD-ecommerce-8B0VDNG51MMNUDF.jpg", "/images/8B0VDNG51MMNUD-ecommerce-8B0VDNG51MMNUDL.jpg", "/images/8B0VDNG51MMNUD-ecommerce-8B0VDNG51MMNUDR.jpg", "/images/8B0VDNG51MMNUD-ecommerce-8B0VDNG51MMNUDS.jpg", "/images/8B0VDNG51MMNUD-ecommerce-8B0VDNG51MMNUDT.jpg"],
+    detailImage: "/images/8B0VDNG51MMNUD-ecommerce-8B0VDNG51MMNUDU.jpg",
+  },
+
+  {
+    sku: "8B3VDMY51MMR9M",
+    description: "Gown in cady couture",
+    colorDesc: "Paris",
+    sizes: ["36", "38", "40", "42", "44", "46", "48", "50"],
+    preshootImages: ["/images/8B3VDMY51MMR9M-preshooting-8B3VDMY51MMR9MRf.jpg", "/images/8B3VDMY51MMR9M-preshooting-8B3VDMY51MMR9MRb.jpg"],
+    ecommImages: ["/images/8B3VDMY51MMR9M-ecommerce-8B3VDMY51MMR9MB.jpg", "/images/8B3VDMY51MMR9M-ecommerce-8B3VDMY51MMR9MF.jpg", "/images/8B3VDMY51MMR9M-ecommerce-8B3VDMY51MMR9ML.jpg", "/images/8B3VDMY51MMR9M-ecommerce-8B3VDMY51MMR9MR.jpg", "/images/8B3VDMY51MMR9M-ecommerce-8B3VDMY51MMR9MS.jpg", "/images/8B3VDMY51MMR9M-ecommerce-8B3VDMY51MMR9MT.jpg"],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B3VDMS693MC9N",
+    description: "Gown in light georgette",
+    colorDesc: "Reddish grey",
+    sizes: ["38", "40", "42", "44", "46"],
+    preshootImages: ["/images/8B3VDMS693MC9N-preshooting-8B3VDMS693MC9NRf.jpg", "/images/8B3VDMS693MC9N-preshooting-8B3VDMS693MC9NRb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "7B3VDLT51EDZ43",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Lilla/multicolor",
+    sizes: ["42", "44", "46"],
+    preshootImages: ["/images/7B3VDLT51EDZ43-preshooting-7B3VDLT51EDZ43Rf.jpg", "/images/7B3VDLT51EDZ43-preshooting-7B3VDLT51EDZ43Rb.jpg", "/images/7B3VDLT51EDZ43-preshooting-7B3VDLT51EDZ43Rs.jpg"],
+    ecommImages: ["/images/7B3VDLT51EDZ43-ecommerce-7B3VDLT51EDZ43F.jpg"],
+    detailImage: "/images/7B3VDLT51EDZ43-ecommerce-7B3VDLT51EDZ43D.jpg",
+  },
+
+  {
+    sku: "8B3VDMV093MZNR",
+    description: "Abito lungo con piume in light georgette",
+    colorDesc: "Silver lilac",
+    sizes: ["38", "40", "42", "44", "46", "48"],
+    preshootImages: ["/images/8B3VDMV093MZNR-preshooting-8B3VDMV093MZNRRf.jpg", "/images/8B3VDMV093MZNR-preshooting-8B3VDMV093MZNRRb.jpg", "/images/8B3VDMV093MZNR-preshooting-8B3VDMV093MZNRRs.jpg"],
+    ecommImages: ["/images/8B3VDMV093MZNR-ecommerce-8B3VDMV093MZNRB.jpg", "/images/8B3VDMV093MZNR-ecommerce-8B3VDMV093MZNRF.jpg", "/images/8B3VDMV093MZNR-ecommerce-8B3VDMV093MZNRL.jpg", "/images/8B3VDMV093MZNR-ecommerce-8B3VDMV093MZNRR.jpg", "/images/8B3VDMV093MZNR-ecommerce-8B3VDMV093MZNRS.jpg", "/images/8B3VDMV093MZNR-ecommerce-8B3VDMV093MZNRT.jpg"],
+    detailImage: "/images/8B3VDMV093MZNR-ecommerce-8B3VDMV093MZNRU.jpg",
+  },
+
+  {
+    sku: "XB0VDDA02UPPVD",
+    description: "Gown in chiffon",
+    colorDesc: "Prism violet",
+    sizes: ["38", "42"],
+    preshootImages: ["/images/XB0VDDA02UPPVD-preshooting-XB0VDDA02UPPVDRf.jpg", "/images/XB0VDDA02UPPVD-preshooting-XB0VDDA02UPPVDRb.jpg", "/images/XB0VDDA02UPPVD-preshooting-XB0VDDA02UPPVDRs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B3VDMZ01MMDAL",
+    description: "Abito lungo con piume in cady couture",
+    colorDesc: "Metallic blue",
+    sizes: ["38", "42", "44", "46", "50"],
+    preshootImages: ["/images/8B3VDMZ01MMDAL-preshooting-8B3VDMZ01MMDALRf.jpg", "/images/8B3VDMZ01MMDAL-preshooting-8B3VDMZ01MMDALRb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B3VDMX01MM9Y4",
+    description: "Gown in cady couture",
+    colorDesc: "Light cyan/ nero",
+    sizes: ["40", "42", "44"],
+    preshootImages: ["/images/8B3VDMX01MM9Y4-preshooting-8B3VDMX01MM9Y4Rf.jpg", "/images/8B3VDMX01MM9Y4-preshooting-8B3VDMX01MM9Y4Rb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B3VDMW51MMTB1",
+    description: "Abito lungo con piume in cady couture",
+    colorDesc: "Nero/betulla",
+    sizes: ["36", "38", "42", "44", "48"],
+    preshootImages: ["/images/8B3VDMW51MMTB1-preshooting-8B3VDMW51MMTB1Rf.jpg", "/images/8B3VDMW51MMTB1-preshooting-8B3VDMW51MMTB1Rb.jpg", "/images/8B3VDMW51MMTB1-preshooting-8B3VDMW51MMTB1Rs.jpg"],
+    ecommImages: ["/images/8B3VDMW51MMTB1-ecommerce-8B3VDMW51MMTB1B.jpg", "/images/8B3VDMW51MMTB1-ecommerce-8B3VDMW51MMTB1F.jpg", "/images/8B3VDMW51MMTB1-ecommerce-8B3VDMW51MMTB1L.jpg", "/images/8B3VDMW51MMTB1-ecommerce-8B3VDMW51MMTB1R.jpg", "/images/8B3VDMW51MMTB1-ecommerce-8B3VDMW51MMTB1S.jpg", "/images/8B3VDMW51MMTB1-ecommerce-8B3VDMW51MMTB1T.jpg"],
+    detailImage: "/images/8B3VDMW51MMTB1-ecommerce-8B3VDMW51MMTB1U.jpg",
+  },
+
+  {
+    sku: "8B3VDMW01EDP83",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Praline/silver/rose",
+    sizes: ["38", "40", "44", "46"],
+    preshootImages: ["/images/8B3VDMW01EDP83-preshooting-8B3VDMW01EDP83Rf.jpg", "/images/8B3VDMW01EDP83-preshooting-8B3VDMW01EDP83Rb.jpg", "/images/8B3VDMW01EDP83-preshooting-8B3VDMW01EDP83Rs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/8B3VDMW01EDP83-preshooting-8B3VDMW01EDP83Rd.jpg",
+  },
+
+  {
+    sku: "8B3VDMV593MDDS",
+    description: "Gown in light georgette",
+    colorDesc: "Toasted almond",
+    sizes: ["38", "40", "42", "44", "46", "48"],
+    preshootImages: ["/images/8B3VDMV593MDDS-preshooting-8B3VDMV593MDDSRf.jpg", "/images/8B3VDMV593MDDS-preshooting-8B3VDMV593MDDSRb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B3VDMR71MM993",
+    description: "Gown in cady couture",
+    colorDesc: "Salmone",
+    sizes: ["42", "46", "48", "50", "52"],
+    preshootImages: [],
+    ecommImages: ["/images/8B3VDMR71MM993-ecommerce-8B3VDMR71MM993F.jpg", "/images/8B3VDMR71MM993-ecommerce-8B3VDMR71MM993L.jpg", "/images/8B3VDMR71MM993-ecommerce-8B3VDMR71MM993R.jpg", "/images/8B3VDMR71MM993-ecommerce-8B3VDMR71MM993S.jpg", "/images/8B3VDMR71MM993-ecommerce-8B3VDMR71MM993T.jpg"],
+    detailImage: "/images/8B3VDMR71MM993-ecommerce-8B3VDMR71MM993U.jpg",
+  },
+
+  {
+    sku: "8B3VDMR51MMQM1",
+    description: "Abito lungo ricamato con piume in cady couture",
+    colorDesc: "Dirty sage/multicolor",
+    sizes: ["38", "40", "46", "50"],
+    preshootImages: ["/images/8B3VDMR51MMQM1-preshooting-8B3VDMR51MMQM1Rf.jpg", "/images/8B3VDMR51MMQM1-preshooting-8B3VDMR51MMQM1Rb.jpg"],
+    ecommImages: ["/images/8B3VDMR51MMQM1-ecommerce-8B3VDMR51MMQM1B.jpg", "/images/8B3VDMR51MMQM1-ecommerce-8B3VDMR51MMQM1F.jpg", "/images/8B3VDMR51MMQM1-ecommerce-8B3VDMR51MMQM1L.jpg", "/images/8B3VDMR51MMQM1-ecommerce-8B3VDMR51MMQM1R.jpg", "/images/8B3VDMR51MMQM1-ecommerce-8B3VDMR51MMQM1S.jpg", "/images/8B3VDMR51MMQM1-ecommerce-8B3VDMR51MMQM1T.jpg"],
+    detailImage: "/images/8B3VDMR51MMQM1-ecommerce-8B3VDMR51MMQM1U.jpg",
+  },
+
+  {
+    sku: "8B3VDMR08M6C2G",
+    description: "Abito lungo ricamato con piume in crepe satin",
+    colorDesc: "Lily violet/silver",
+    sizes: ["38", "42", "48"],
+    preshootImages: ["/images/8B3VDMR08M6C2G-preshooting-8B3VDMR08M6C2GRf.jpg", "/images/8B3VDMR08M6C2G-preshooting-8B3VDMR08M6C2GRb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B3VDMP593MDDB",
+    description: "Abito lungo ricamato in light georgette",
+    colorDesc: "Lime punch/silver/gold",
+    sizes: ["42", "44", "50", "52"],
+    preshootImages: ["/images/8B3VDMP593MDDB-preshooting-8B3VDMP593MDDBRf.jpg", "/images/8B3VDMP593MDDB-preshooting-8B3VDMP593MDDBRb.jpg", "/images/8B3VDMP593MDDB-preshooting-8B3VDMP593MDDBRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/8B3VDMP593MDDB-preshooting-8B3VDMP593MDDBRd.jpg",
+  },
+
+  {
+    sku: "8B3VDML593MNUD",
+    description: "Abito lungo ricamato in light georgette",
+    colorDesc: "Nero/silver",
+    sizes: ["36", "40", "42", "44", "46"],
+    preshootImages: ["/images/8B3VDML593MNUD-preshooting-8B3VDML593MNUDRf.jpg", "/images/8B3VDML593MNUD-preshooting-8B3VDML593MNUDRb.jpg"],
+    ecommImages: ["/images/8B3VDML593MNUD-ecommerce-8B3VDML593MNUDB.jpg", "/images/8B3VDML593MNUD-ecommerce-8B3VDML593MNUDF.jpg", "/images/8B3VDML593MNUD-ecommerce-8B3VDML593MNUDL.jpg", "/images/8B3VDML593MNUD-ecommerce-8B3VDML593MNUDS.jpg", "/images/8B3VDML593MNUD-ecommerce-8B3VDML593MNUDT.jpg"],
+    detailImage: "/images/8B3VDML593MNUD-ecommerce-8B3VDML593MNUDU.jpg",
+  },
+
+  {
+    sku: "8B3VDMK01ED02X",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Praline multicolor",
+    sizes: ["42", "48"],
+    preshootImages: ["/images/8B3VDMK01ED02X-preshooting-8B3VDMK01ED02XRf.jpg", "/images/8B3VDMK01ED02X-preshooting-8B3VDMK01ED02XRb.jpg", "/images/8B3VDMK01ED02X-preshooting-8B3VDMK01ED02XRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/8B3VDMK01ED02X-preshooting-8B3VDMK01ED02XRd.jpg",
+  },
+
+  {
+    sku: "8B3VDMJ58M6BRR",
+    description: "Abito lungo ricamato in crepe satin",
+    colorDesc: "Pale champagne/multicolor",
+    sizes: ["38", "40", "42", "46", "48", "50"],
+    preshootImages: ["/images/8B3VDMJ58M6BRR-preshooting-8B3VDMJ58M6BRRRf.jpg", "/images/8B3VDMJ58M6BRR-preshooting-8B3VDMJ58M6BRRRb.jpg", "/images/8B3VDMJ58M6BRR-preshooting-8B3VDMJ58M6BRRRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/8B3VDMJ58M6BRR-preshooting-8B3VDMJ58M6BRRRd.jpg",
+  },
+
+  {
+    sku: "8B3VDME19U8A8K",
+    description: "Gown in crepe de chine jacquard apres l'hiver lilium",
+    colorDesc: "Nero lilium/ multicolor",
+    sizes: ["36", "38", "40", "42", "44"],
+    preshootImages: ["/images/8B3VDME19U8A8K-preshooting-8B3VDME19U8A8KRf.jpg", "/images/8B3VDME19U8A8K-preshooting-8B3VDME19U8A8KRb.jpg", "/images/8B3VDME19U8A8K-preshooting-8B3VDME19U8A8KRs.jpg"],
+    ecommImages: ["/images/8B3VDME19U8A8K-ecommerce-8B3VDME19U8A8KB.jpg", "/images/8B3VDME19U8A8K-ecommerce-8B3VDME19U8A8KF.jpg", "/images/8B3VDME19U8A8K-ecommerce-8B3VDME19U8A8KL.jpg", "/images/8B3VDME19U8A8K-ecommerce-8B3VDME19U8A8KR.jpg", "/images/8B3VDME19U8A8K-ecommerce-8B3VDME19U8A8KS.jpg", "/images/8B3VDME19U8A8K-ecommerce-8B3VDME19U8A8KT.jpg"],
+    detailImage: "/images/8B3VDME19U8A8K-ecommerce-8B3VDME19U8A8KU.jpg",
+  },
+
+  {
+    sku: "8B3VDMB51MMR13",
+    description: "Abito lungo ricamato in cady couture",
+    colorDesc: "Rose",
+    sizes: ["42", "44"],
+    preshootImages: ["/images/8B3VDMB51MMR13-preshooting-8B3VDMB51MMR13Rf.jpg", "/images/8B3VDMB51MMR13-preshooting-8B3VDMB51MMR13Rb.jpg", "/images/8B3VDMB51MMR13-preshooting-8B3VDMB51MMR13Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B3VDKU61MMDDC",
+    description: "Abito lungo ricamato in cady couture",
+    colorDesc: "Sandy rose/nero",
+    sizes: ["36", "38", "40", "42", "44", "46", "48", "50", "52"],
+    preshootImages: ["/images/8B3VDKU61MMDDC-preshooting-8B3VDKU61MMDDCRf.jpg", "/images/8B3VDKU61MMDDC-preshooting-8B3VDKU61MMDDCRb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B0VDNE51EDM12",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Multicolor.",
+    sizes: ["40", "42", "44", "46", "50", "52"],
+    preshootImages: ["/images/8B0VDNE51EDM12-preshooting-8B0VDNE51EDM12Rf.jpg", "/images/8B0VDNE51EDM12-preshooting-8B0VDNE51EDM12Rb.jpg"],
+    ecommImages: ["/images/8B0VDNE51EDM12-ecommerce-8B0VDNE51EDM12B.jpg", "/images/8B0VDNE51EDM12-ecommerce-8B0VDNE51EDM12F.jpg", "/images/8B0VDNE51EDM12-ecommerce-8B0VDNE51EDM12L.jpg", "/images/8B0VDNE51EDM12-ecommerce-8B0VDNE51EDM12R.jpg", "/images/8B0VDNE51EDM12-ecommerce-8B0VDNE51EDM12S.jpg", "/images/8B0VDNE51EDM12-ecommerce-8B0VDNE51EDM12T.jpg"],
+    detailImage: "/images/8B0VDNE51EDM12-ecommerce-8B0VDNE51EDM12U.jpg",
+  },
+
+  {
+    sku: "8B0VDNB01MMCZL",
+    description: "Gown in cady couture",
+    colorDesc: "Nero/malted milk",
+    sizes: ["38", "40", "42", "44", "46", "50"],
+    preshootImages: ["/images/8B0VDNB01MMCZL-preshooting-8B0VDNB01MMCZLRf.jpg", "/images/8B0VDNB01MMCZL-preshooting-8B0VDNB01MMCZLRb.jpg", "/images/8B0VDNB01MMCZL-preshooting-8B0VDNB01MMCZLRs.jpg"],
+    ecommImages: ["/images/8B0VDNB01MMCZL-ecommerce-8B0VDNB01MMCZLB.jpg", "/images/8B0VDNB01MMCZL-ecommerce-8B0VDNB01MMCZLF.jpg", "/images/8B0VDNB01MMCZL-ecommerce-8B0VDNB01MMCZLR.jpg", "/images/8B0VDNB01MMCZL-ecommerce-8B0VDNB01MMCZLS.jpg", "/images/8B0VDNB01MMCZL-ecommerce-8B0VDNB01MMCZLT.jpg"],
+    detailImage: "/images/8B0VDNB01MMCZL-ecommerce-8B0VDNB01MMCZLU.jpg",
+  },
+
+  {
+    sku: "8B0VDNA58M6BDN",
+    description: "Gown in crepe satin",
+    colorDesc: "Cobalt blue",
+    sizes: ["36", "40", "42", "44", "46"],
+    preshootImages: ["/images/8B0VDNA58M6BDN-preshooting-8B0VDNA58M6BDNRf.jpg", "/images/8B0VDNA58M6BDN-preshooting-8B0VDNA58M6BDNRs.jpg"],
+    ecommImages: ["/images/8B0VDNA58M6BDN-ecommerce-8B0VDNA58M6BDNB.jpg", "/images/8B0VDNA58M6BDN-ecommerce-8B0VDNA58M6BDNF.jpg", "/images/8B0VDNA58M6BDN-ecommerce-8B0VDNA58M6BDNL.jpg", "/images/8B0VDNA58M6BDN-ecommerce-8B0VDNA58M6BDNR.jpg", "/images/8B0VDNA58M6BDN-ecommerce-8B0VDNA58M6BDNS.jpg", "/images/8B0VDNA58M6BDN-ecommerce-8B0VDNA58M6BDNT.jpg"],
+    detailImage: "/images/8B0VDNA58M6BDN-ecommerce-8B0VDNA58M6BDNU.jpg",
+  },
+
+  {
+    sku: "8B0VDNA08M6R9M",
+    description: "Gown in crepe satin",
+    colorDesc: "Paris",
+    sizes: ["38", "40", "42", "44", "48", "50", "52"],
+    preshootImages: ["/images/8B0VDNA08M6R9M-preshooting-8B0VDNA08M6R9MRf.jpg", "/images/8B0VDNA08M6R9M-preshooting-8B0VDNA08M6R9MRb.jpg", "/images/8B0VDNA08M6R9M-preshooting-8B0VDNA08M6R9MRs.jpg"],
+    ecommImages: ["/images/8B0VDNA08M6R9M-ecommerce-8B0VDNA08M6R9MB.jpg", "/images/8B0VDNA08M6R9M-ecommerce-8B0VDNA08M6R9MF.jpg", "/images/8B0VDNA08M6R9M-ecommerce-8B0VDNA08M6R9ML.jpg", "/images/8B0VDNA08M6R9M-ecommerce-8B0VDNA08M6R9MR.jpg", "/images/8B0VDNA08M6R9M-ecommerce-8B0VDNA08M6R9MS.jpg", "/images/8B0VDNA08M6R9M-ecommerce-8B0VDNA08M6R9MT.jpg"],
+    detailImage: "/images/8B0VDNA08M6R9M-ecommerce-8B0VDNA08M6R9MU.jpg",
+  },
+
+  {
+    sku: "8B0VDN901MMK92",
+    description: "Abito lungo ricamato in cady couture",
+    colorDesc: "Nero+multicolor",
+    sizes: ["38", "40", "42", "44"],
+    preshootImages: ["/images/8B0VDN901MMK92-preshooting-8B0VDN901MMK92Rf.jpg", "/images/8B0VDN901MMK92-preshooting-8B0VDN901MMK92Rb.jpg", "/images/8B0VDN901MMK92-preshooting-8B0VDN901MMK92Rs.jpg"],
+    ecommImages: ["/images/8B0VDN901MMK92-ecommerce-8B0VDN901MMK92B.jpg", "/images/8B0VDN901MMK92-ecommerce-8B0VDN901MMK92F.jpg", "/images/8B0VDN901MMK92-ecommerce-8B0VDN901MMK92L.jpg", "/images/8B0VDN901MMK92-ecommerce-8B0VDN901MMK92S.jpg", "/images/8B0VDN901MMK92-ecommerce-8B0VDN901MMK92T.jpg"],
+    detailImage: "/images/8B0VDN901MMK92-ecommerce-8B0VDN901MMK92U.jpg",
+  },
+
+  {
+    sku: "8B0VDN651ED02X",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Praline multicolor",
+    sizes: ["36", "42", "44"],
+    preshootImages: ["/images/8B0VDN651ED02X-preshooting-8B0VDN651ED02XRf.jpg", "/images/8B0VDN651ED02X-preshooting-8B0VDN651ED02XRb.jpg", "/images/8B0VDN651ED02X-preshooting-8B0VDN651ED02XRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/8B0VDN651ED02X-preshooting-8B0VDN651ED02XRd.jpg",
+  },
+
+  {
+    sku: "8B0VDN461EDARH",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Sable'/silver",
+    sizes: ["38", "40", "42", "44"],
+    preshootImages: ["/images/8B0VDN461EDARH-preshooting-8B0VDN461EDARHRf.jpg", "/images/8B0VDN461EDARH-preshooting-8B0VDN461EDARHRb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B0VDN411MMG14",
+    description: "Abito lungo ricamato in cady couture",
+    colorDesc: "Nero/gold",
+    sizes: ["38", "40", "42", "44", "50"],
+    preshootImages: ["/images/8B0VDN411MMG14-preshooting-8B0VDN411MMG14Rf.jpg", "/images/8B0VDN411MMG14-preshooting-8B0VDN411MMG14Rb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "8B0VDN352UPCVV",
+    description: "Abito lungo ricamato in chiffon",
+    colorDesc: "Electric pink/silver",
+    sizes: ["42", "44", "46", "50"],
+    preshootImages: ["/images/8B0VDN352UPCVV-preshooting-8B0VDN352UPCVVRf.jpg", "/images/8B0VDN352UPCVV-preshooting-8B0VDN352UPCVVRb.jpg", "/images/8B0VDN352UPCVV-preshooting-8B0VDN352UPCVVRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/8B0VDN352UPCVV-preshooting-8B0VDN352UPCVVRd.jpg",
+  },
+
+  {
+    sku: "8B0VDN311EDK92",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Nero+multicolor",
+    sizes: ["38", "40", "42"],
+    preshootImages: ["/images/8B0VDN311EDK92-preshooting-8B0VDN311EDK92Rf.jpg", "/images/8B0VDN311EDK92-preshooting-8B0VDN311EDK92Rb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "7BMVDM608M6BRR",
+    description: "Abito lungo ricamato in crepe satin",
+    colorDesc: "Pale champagne/multicolor",
+    sizes: ["38", "42", "44", "50"],
+    preshootImages: ["/images/7BMVDM608M6BRR-preshooting-7BMVDM608M6BRRRf.jpg", "/images/7BMVDM608M6BRR-preshooting-7BMVDM608M6BRRRb.jpg", "/images/7BMVDM608M6BRR-preshooting-7BMVDM608M6BRRRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/7BMVDM608M6BRR-preshooting-7BMVDM608M6BRRRd.jpg",
+  },
+
+  {
+    sku: "7B3VDLW11EDDJF",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Praline/gold/azzurro",
+    sizes: ["46"],
+    preshootImages: ["/images/7B3VDLW11EDDJF-preshooting-7B3VDLW11EDDJFRf.jpg"],
+    ecommImages: ["/images/7B3VDLW11EDDJF-ecommerce-7B3VDLW11EDDJFF.jpg"],
+    detailImage: null,
+  },
+
+  {
+    sku: "7B3VDLW01EDDJE",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Dirty sage/gold/silver",
+    sizes: ["40", "46", "50"],
+    preshootImages: [],
+    ecommImages: ["/images/7B3VDLW01EDDJE-ecommerce-7B3VDLW01EDDJEF.jpg"],
+    detailImage: "/images/7B3VDLW01EDDJE-ecommerce-7B3VDLW01EDDJED.jpg",
+  },
+
+  {
+    sku: "7B3VDLV19A6229",
+    description: "Gown in chiffon creponne",
+    colorDesc: "Smog",
+    sizes: ["36", "38", "40", "42", "44", "46", "48", "50"],
+    preshootImages: ["/images/7B3VDLV19A6229-preshooting-7B3VDLV19A6229Rf.jpg", "/images/7B3VDLV19A6229-preshooting-7B3VDLV19A6229Rb.jpg", "/images/7B3VDLV19A6229-preshooting-7B3VDLV19A6229Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "7B3VDLV01EDDJN",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Praline/antique gold/rose",
+    sizes: ["38", "40", "42", "48"],
+    preshootImages: ["/images/7B3VDLV01EDDJN-preshooting-7B3VDLV01EDDJNRf.jpg", "/images/7B3VDLV01EDDJN-preshooting-7B3VDLV01EDDJNRb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "7B3VDLT09A6A6Z",
+    description: "Abito lungo ricamato in chiffon creponne",
+    colorDesc: "Natural rafia/ pale rugiada",
+    sizes: ["38", "42", "44", "46"],
+    preshootImages: ["/images/7B3VDLT09A6A6Z-preshooting-7B3VDLT09A6A6ZRf.jpg"],
+    ecommImages: ["/images/7B3VDLT09A6A6Z-ecommerce-7B3VDLT09A6A6ZF.jpg"],
+    detailImage: "/images/7B3VDLT09A6A6Z-ecommerce-7B3VDLT09A6A6ZU.jpg",
+  },
+
+  {
+    sku: "7B3VDLS51MH0NA",
+    description: "Gown in georgette",
+    colorDesc: "Nero/avorio",
+    sizes: ["36", "40", "42", "44", "46"],
+    preshootImages: ["/images/7B3VDLS51MH0NA-preshooting-7B3VDLS51MH0NARf.jpg", "/images/7B3VDLS51MH0NA-preshooting-7B3VDLS51MH0NARb.jpg", "/images/7B3VDLS51MH0NA-preshooting-7B3VDLS51MH0NARs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "7B3VDLS01C8D0Z",
+    description: "Abito lungo in organza",
+    colorDesc: "Crystal red",
+    sizes: ["42", "44", "48"],
+    preshootImages: ["/images/7B3VDLS01C8D0Z-preshooting-7B3VDLS01C8D0ZRf.jpg", "/images/7B3VDLS01C8D0Z-preshooting-7B3VDLS01C8D0ZRb.jpg", "/images/7B3VDLS01C8D0Z-preshooting-7B3VDLS01C8D0ZRs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "7B3VDLR09DWTB1",
+    description: "Gown in crepe de chine plusdepois pois medio",
+    colorDesc: "Nero/betulla",
+    sizes: ["44", "46"],
+    preshootImages: ["/images/7B3VDLR09DWTB1-preshooting-7B3VDLR09DWTB1Rf.jpg", "/images/7B3VDLR09DWTB1-preshooting-7B3VDLR09DWTB1Rb.jpg", "/images/7B3VDLR09DWTB1-preshooting-7B3VDLR09DWTB1Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "7B3VDLQ11CFCRC",
+    description: "Abito lungo ricamato in crepe couture",
+    colorDesc: "Nero/gold/silver",
+    sizes: ["38", "40", "42", "44"],
+    preshootImages: ["/images/7B3VDLQ11CFCRC-preshooting-7B3VDLQ11CFCRCRf.jpg", "/images/7B3VDLQ11CFCRC-preshooting-7B3VDLQ11CFCRCRb.jpg", "/images/7B3VDLQ11CFCRC-preshooting-7B3VDLQ11CFCRCRs.jpg"],
+    ecommImages: ["/images/7B3VDLQ11CFCRC-ecommerce-7B3VDLQ11CFCRCF.jpg", "/images/7B3VDLQ11CFCRC-ecommerce-7B3VDLQ11CFCRCR.jpg"],
+    detailImage: "/images/7B3VDLQ11CFCRC-ecommerce-7B3VDLQ11CFCRCD.jpg",
+  },
+
+  {
+    sku: "7B3VDLN51CFCRC",
+    description: "Abito lungo ricamato in crepe couture",
+    colorDesc: "Nero/gold/silver",
+    sizes: ["38", "40", "48", "50"],
+    preshootImages: ["/images/7B3VDLN51CFCRC-preshooting-7B3VDLN51CFCRCRf.jpg", "/images/7B3VDLN51CFCRC-preshooting-7B3VDLN51CFCRCRb.jpg", "/images/7B3VDLN51CFCRC-preshooting-7B3VDLN51CFCRCRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/7B3VDLN51CFCRC-preshooting-7B3VDLN51CFCRCRd.jpg",
+  },
+
+  {
+    sku: "7B3VDLM11MHYEW",
+    description: "Abito lungo ricamato in georgette",
+    colorDesc: "Taffy/silver",
+    sizes: ["38", "42", "46"],
+    preshootImages: ["/images/7B3VDLM11MHYEW-preshooting-7B3VDLM11MHYEWRf.jpg", "/images/7B3VDLM11MHYEW-preshooting-7B3VDLM11MHYEWRb.jpg"],
+    ecommImages: ["/images/7B3VDLM11MHYEW-ecommerce-7B3VDLM11MHYEWF.jpg", "/images/7B3VDLM11MHYEW-ecommerce-7B3VDLM11MHYEWR.jpg"],
+    detailImage: "/images/7B3VDLM11MHYEW-ecommerce-7B3VDLM11MHYEWD.jpg",
+  },
+
+  {
+    sku: "7B3VDLL593MDH3",
+    description: "Abito lungo in light georgette",
+    colorDesc: "Betulla/lilac",
+    sizes: ["36", "38", "48", "50"],
+    preshootImages: ["/images/7B3VDLL593MDH3-preshooting-7B3VDLL593MDH3Rf.jpg", "/images/7B3VDLL593MDH3-preshooting-7B3VDLL593MDH3Rb.jpg", "/images/7B3VDLL593MDH3-preshooting-7B3VDLL593MDH3Rs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/7B3VDLL593MDH3-preshooting-7B3VDLL593MDH3Rd.jpg",
+  },
+
+  {
+    sku: "7B3VDLL1914R0R",
+    description: "Abito lungo ricamato in rustic silk",
+    colorDesc: "Betulla/multicolor",
+    sizes: ["38", "40", "44", "46", "48"],
+    preshootImages: ["/images/7B3VDLL1914R0R-preshooting-7B3VDLL1914R0RRf.jpg", "/images/7B3VDLL1914R0R-preshooting-7B3VDLL1914R0RRb.jpg", "/images/7B3VDLL1914R0R-preshooting-7B3VDLL1914R0RRs.jpg"],
+    ecommImages: ["/images/7B3VDLL1914R0R-ecommerce-7B3VDLL1914R0RF.jpg"],
+    detailImage: "/images/7B3VDLL1914R0R-ecommerce-7B3VDLL1914R0RU.jpg",
+  },
+
+  {
+    sku: "7B3VDLH01EDU48",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Avorio/silver",
+    sizes: ["50"],
+    preshootImages: ["/images/7B3VDLH01EDU48-preshooting-7B3VDLH01EDU48Rf.jpg", "/images/7B3VDLH01EDU48-preshooting-7B3VDLH01EDU48Rb.jpg", "/images/7B3VDLH01EDU48-preshooting-7B3VDLH01EDU48Rs.jpg"],
+    ecommImages: ["/images/7B3VDLH01EDU48-ecommerce-7B3VDLH01EDU48F.jpg"],
+    detailImage: "/images/7B3VDLH01EDU48-ecommerce-7B3VDLH01EDU48D.jpg",
+  },
+
+  {
+    sku: "7B3VDLF71MMR0R",
+    description: "Abito lungo ricamato in cady couture",
+    colorDesc: "Betulla/multicolor",
+    sizes: ["38", "46", "48"],
+    preshootImages: ["/images/7B3VDLF71MMR0R-preshooting-7B3VDLF71MMR0RRf.jpg", "/images/7B3VDLF71MMR0R-preshooting-7B3VDLF71MMR0RRb.jpg", "/images/7B3VDLF71MMR0R-preshooting-7B3VDLF71MMR0RRs.jpg"],
+    ecommImages: ["/images/7B3VDLF71MMR0R-ecommerce-7B3VDLF71MMR0RF.jpg"],
+    detailImage: "/images/7B3VDLF71MMR0R-ecommerce-7B3VDLF71MMR0RD.jpg",
+  },
+
+  {
+    sku: "7B3VDLF693MBYG",
+    description: "Abito lungo ricamato in light georgette",
+    colorDesc: "Betulla/oro",
+    sizes: ["44", "48"],
+    preshootImages: ["/images/7B3VDLF693MBYG-preshooting-7B3VDLF693MBYGRf.jpg", "/images/7B3VDLF693MBYG-preshooting-7B3VDLF693MBYGRb.jpg", "/images/7B3VDLF693MBYG-preshooting-7B3VDLF693MBYGRs.jpg"],
+    ecommImages: ["/images/7B3VDLF693MBYG-ecommerce-7B3VDLF693MBYGF.jpg"],
+    detailImage: "/images/7B3VDLF693MBYG-ecommerce-7B3VDLF693MBYGD.jpg",
+  },
+
+  {
+    sku: "7B3VDLA59B3R73",
+    description: "Gown in plusdepois chiffon creponne motivo pois allover",
+    colorDesc: "Rose/avorio",
+    sizes: ["36", "38", "42", "46"],
+    preshootImages: ["/images/7B3VDLA59B3R73-preshooting-7B3VDLA59B3R73Rf.jpg", "/images/7B3VDLA59B3R73-preshooting-7B3VDLA59B3R73Rb.jpg", "/images/7B3VDLA59B3R73-preshooting-7B3VDLA59B3R73Rs.jpg"],
+    ecommImages: ["/images/7B3VDLA59B3R73-ecommerce-7B3VDLA59B3R73F.jpg"],
+    detailImage: "/images/7B3VDLA59B3R73-ecommerce-7B3VDLA59B3R73U.jpg",
+  },
+
+  {
+    sku: "7B0VDMH09RGH08",
+    description: "Abito lungo ricamato in pizzo",
+    colorDesc: "Champagne",
+    sizes: ["36", "40", "46"],
+    preshootImages: ["/images/7B0VDMH09RGH08-preshooting-7B0VDMH09RGH08Rf.jpg", "/images/7B0VDMH09RGH08-preshooting-7B0VDMH09RGH08Rb.jpg", "/images/7B0VDMH09RGH08-preshooting-7B0VDMH09RGH08Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "7B0VDMG51MM9QK",
+    description: "Gown in cady couture",
+    colorDesc: "Paris/nero",
+    sizes: ["36", "38", "40", "42", "44", "46", "48", "50", "52"],
+    preshootImages: ["/images/7B0VDMG51MM9QK-preshooting-7B0VDMG51MM9QKRf.jpg", "/images/7B0VDMG51MM9QK-preshooting-7B0VDMG51MM9QKRb.jpg", "/images/7B0VDMG51MM9QK-preshooting-7B0VDMG51MM9QKRs.jpg"],
+    ecommImages: ["/images/7B0VDMG51MM9QK-ecommerce-7B0VDMG51MM9QKF.jpg"],
+    detailImage: "/images/7B0VDMG51MM9QK-ecommerce-7B0VDMG51MM9QKU.jpg",
+  },
+
+  {
+    sku: "7B0VDMF01ED02X",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Praline multicolor",
+    sizes: ["38", "42", "44", "50", "52"],
+    preshootImages: ["/images/7B0VDMF01ED02X-preshooting-7B0VDMF01ED02XRf.jpg", "/images/7B0VDMF01ED02X-preshooting-7B0VDMF01ED02XRb.jpg", "/images/7B0VDMF01ED02X-preshooting-7B0VDMF01ED02XRs.jpg"],
+    ecommImages: ["/images/7B0VDMF01ED02X-ecommerce-7B0VDMF01ED02XF.jpg"],
+    detailImage: "/images/7B0VDMF01ED02X-ecommerce-7B0VDMF01ED02XD.jpg",
+  },
+
+  {
+    sku: "7B0VDME51EDAAB",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Praline/lavanda",
+    sizes: ["38", "52"],
+    preshootImages: ["/images/7B0VDME51EDAAB-preshooting-7B0VDME51EDAABRf.jpg", "/images/7B0VDME51EDAAB-preshooting-7B0VDME51EDAABRb.jpg", "/images/7B0VDME51EDAAB-preshooting-7B0VDME51EDAABRs.jpg"],
+    ecommImages: ["/images/7B0VDME51EDAAB-ecommerce-7B0VDME51EDAABF.jpg"],
+    detailImage: "/images/7B0VDME51EDAAB-ecommerce-7B0VDME51EDAABD.jpg",
+  },
+
+  {
+    sku: "7B0VDMB61EDLL2",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Lilas",
+    sizes: ["40", "44", "46", "48", "50"],
+    preshootImages: ["/images/7B0VDMB61EDLL2-preshooting-7B0VDMB61EDLL2Rf.jpg", "/images/7B0VDMB61EDLL2-preshooting-7B0VDMB61EDLL2Rb.jpg", "/images/7B0VDMB61EDLL2-preshooting-7B0VDMB61EDLL2Rs.jpg"],
+    ecommImages: ["/images/7B0VDMB61EDLL2-ecommerce-7B0VDMB61EDLL2F.jpg"],
+    detailImage: "/images/7B0VDMB61EDLL2-ecommerce-7B0VDMB61EDLL2D.jpg",
+  },
+
+  {
+    sku: "7B0VDMA09Q90NO",
+    description: "Gown in velluto sable'",
+    colorDesc: "Nero",
+    sizes: ["40", "42", "44", "46", "48"],
+    preshootImages: ["/images/7B0VDMA09Q90NO-preshooting-7B0VDMA09Q90NORf.jpg", "/images/7B0VDMA09Q90NO-preshooting-7B0VDMA09Q90NORb.jpg", "/images/7B0VDMA09Q90NO-preshooting-7B0VDMA09Q90NORs.jpg"],
+    ecommImages: ["/images/7B0VDMA09Q90NO-ecommerce-7B0VDMA09Q90NOB.jpg", "/images/7B0VDMA09Q90NO-ecommerce-7B0VDMA09Q90NOF.jpg", "/images/7B0VDMA09Q90NO-ecommerce-7B0VDMA09Q90NOL.jpg", "/images/7B0VDMA09Q90NO-ecommerce-7B0VDMA09Q90NOR.jpg", "/images/7B0VDMA09Q90NO-ecommerce-7B0VDMA09Q90NOS.jpg", "/images/7B0VDMA09Q90NO-ecommerce-7B0VDMA09Q90NOT.jpg"],
+    detailImage: "/images/7B0VDMA09Q90NO-ecommerce-7B0VDMA09Q90NOU.jpg",
+  },
+
+  {
+    sku: "7B0VDM809A6M12",
+    description: "Abito lungo ricamato in chiffon creponne",
+    colorDesc: "Multicolor.",
+    sizes: ["38", "42", "44", "46", "48", "50"],
+    preshootImages: ["/images/7B0VDM809A6M12-preshooting-7B0VDM809A6M12Rf.jpg", "/images/7B0VDM809A6M12-preshooting-7B0VDM809A6M12Rb.jpg", "/images/7B0VDM809A6M12-preshooting-7B0VDM809A6M12Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "7B0VDM558HECC1",
+    description: "Abito lungo ricamato in duchesse",
+    colorDesc: "Pine/lilac/black",
+    sizes: ["40", "42", "44", "46", "48", "50", "52"],
+    preshootImages: ["/images/7B0VDM558HECC1-preshooting-7B0VDM558HECC1Rf.jpg", "/images/7B0VDM558HECC1-preshooting-7B0VDM558HECC1Rb.jpg", "/images/7B0VDM558HECC1-preshooting-7B0VDM558HECC1Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "7B0VDM458M6CC3",
+    description: "Abito lungo ricamato in crepe satin",
+    colorDesc: "Rose/ antique silver",
+    sizes: ["38", "44", "46"],
+    preshootImages: ["/images/7B0VDM458M6CC3-preshooting-7B0VDM458M6CC3Rf.jpg", "/images/7B0VDM458M6CC3-preshooting-7B0VDM458M6CC3Rb.jpg", "/images/7B0VDM458M6CC3-preshooting-7B0VDM458M6CC3Rs.jpg"],
+    ecommImages: ["/images/7B0VDM458M6CC3-ecommerce-7B0VDM458M6CC3F.jpg"],
+    detailImage: "/images/7B0VDM458M6CC3-ecommerce-7B0VDM458M6CC3D.jpg",
+  },
+
+  {
+    sku: "7B0VDM209Q90NO",
+    description: "Abito lungo in velluto sable'",
+    colorDesc: "Nero",
+    sizes: ["40", "42", "44", "46"],
+    preshootImages: ["/images/7B0VDM209Q90NO-preshooting-7B0VDM209Q90NORf.jpg", "/images/7B0VDM209Q90NO-preshooting-7B0VDM209Q90NORb.jpg", "/images/7B0VDM209Q90NO-preshooting-7B0VDM209Q90NORs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "7B0VDM101ED02X",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Praline multicolor",
+    sizes: ["40", "44", "46"],
+    preshootImages: ["/images/7B0VDM101ED02X-preshooting-7B0VDM101ED02XRf.jpg", "/images/7B0VDM101ED02X-preshooting-7B0VDM101ED02XRb.jpg", "/images/7B0VDM101ED02X-preshooting-7B0VDM101ED02XRs.jpg"],
+    ecommImages: ["/images/7B0VDM101ED02X-ecommerce-7B0VDM101ED02XF.jpg"],
+    detailImage: "/images/7B0VDM101ED02X-ecommerce-7B0VDM101ED02XD.jpg",
+  },
+
+  {
+    sku: "7B0VDM069Q9CB5",
+    description: "Gown in velluto sable'",
+    colorDesc: "Clean blue/fuxia red",
+    sizes: ["40", "42", "44", "50"],
+    preshootImages: ["/images/7B0VDM069Q9CB5-preshooting-7B0VDM069Q9CB5Rf.jpg", "/images/7B0VDM069Q9CB5-preshooting-7B0VDM069Q9CB5Rb.jpg", "/images/7B0VDM069Q9CB5-preshooting-7B0VDM069Q9CB5Rs.jpg"],
+    ecommImages: ["/images/7B0VDM069Q9CB5-ecommerce-7B0VDM069Q9CB5F.jpg", "/images/7B0VDM069Q9CB5-ecommerce-7B0VDM069Q9CB5R.jpg"],
+    detailImage: "/images/7B0VDM069Q9CB5-ecommerce-7B0VDM069Q9CB5D.jpg",
+  },
+
+  {
+    sku: "7B0VDKJ81EDPS1",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Poudre/silver",
+    sizes: ["46", "48", "50", "52"],
+    preshootImages: ["/images/7B0VDKJ81EDPS1-preshooting-7B0VDKJ81EDPS1Rf.jpg", "/images/7B0VDKJ81EDPS1-preshooting-7B0VDKJ81EDPS1Rb.jpg", "/images/7B0VDKJ81EDPS1-preshooting-7B0VDKJ81EDPS1Rs.jpg"],
+    ecommImages: ["/images/7B0VDKJ81EDPS1-ecommerce-7B0VDKJ81EDPS1F.jpg"],
+    detailImage: "/images/7B0VDKJ81EDPS1-ecommerce-7B0VDKJ81EDPS1D.jpg",
+  },
+
+  {
+    sku: "6BMVDLC69D20NA",
+    description: "Gown in point d'esprit ricamato",
+    colorDesc: "Nero/avorio",
+    sizes: ["36", "40", "42", "44"],
+    preshootImages: ["/images/6BMVDLC69D20NA-preshooting-6BMVDLC69D20NARf.jpg", "/images/6BMVDLC69D20NA-preshooting-6BMVDLC69D20NARb.jpg", "/images/6BMVDLC69D20NA-preshooting-6BMVDLC69D20NARs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/6BMVDLC69D20NA-preshooting-6BMVDLC69D20NARd.jpg",
+  },
+
+  {
+    sku: "6B3VDKV61ED0X2",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Old ivory",
+    sizes: ["40", "42", "44", "48"],
+    preshootImages: ["/images/6B3VDKV61ED0X2-preshooting-6B3VDKV61ED0X2Rf.jpg", "/images/6B3VDKV61ED0X2-preshooting-6B3VDKV61ED0X2Rb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "6B3VDKV096FEG4",
+    description: "Gown in creponne motivo papier floral",
+    colorDesc: "Nude rose",
+    sizes: ["40", "42"],
+    preshootImages: ["/images/6B3VDKV096FEG4-preshooting-6B3VDKV096FEG4Rf.jpg", "/images/6B3VDKV096FEG4-preshooting-6B3VDKV096FEG4Rb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "6B3VDKU091PRE3",
+    description: "Abito lungo ricamato in lurex jacquard apres l'hiver motivo floreale",
+    colorDesc: "Laurel/multicolor",
+    sizes: ["38", "40", "42"],
+    preshootImages: ["/images/6B3VDKU091PRE3-preshooting-6B3VDKU091PRE3Rf.jpg", "/images/6B3VDKU091PRE3-preshooting-6B3VDKU091PRE3Rb.jpg"],
+    ecommImages: ["/images/6B3VDKU091PRE3-ecommerce-6B3VDKU091PRE3F.jpg", "/images/6B3VDKU091PRE3-ecommerce-6B3VDKU091PRE3R.jpg"],
+    detailImage: "/images/6B3VDKU091PRE3-ecommerce-6B3VDKU091PRE3D.jpg",
+  },
+
+  {
+    sku: "6B3VDKT51EDM12",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Multicolor.",
+    sizes: ["36", "38", "40", "44"],
+    preshootImages: ["/images/6B3VDKT51EDM12-preshooting-6B3VDKT51EDM12Rf.jpg", "/images/6B3VDKT51EDM12-preshooting-6B3VDKT51EDM12Rb.jpg"],
+    ecommImages: ["/images/6B3VDKT51EDM12-ecommerce-6B3VDKT51EDM12F.jpg"],
+    detailImage: "/images/6B3VDKT51EDM12-ecommerce-6B3VDKT51EDM12D.jpg",
+  },
+
+  {
+    sku: "6B3VDKT01EDAK5",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Azzurro polvere",
+    sizes: ["36", "38", "40", "42", "44", "46"],
+    preshootImages: ["/images/6B3VDKT01EDAK5-preshooting-6B3VDKT01EDAK5Rf.jpg", "/images/6B3VDKT01EDAK5-preshooting-6B3VDKT01EDAK5Rb.jpg"],
+    ecommImages: [],
+    detailImage: "/images/6B3VDKT01EDAK5-preshooting-6B3VDKT01EDAK5Rd.jpg",
+  },
+
+  {
+    sku: "6B3VDKS11EDR4Q",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Nude/multicolor",
+    sizes: ["36", "42"],
+    preshootImages: ["/images/6B3VDKS11EDR4Q-preshooting-6B3VDKS11EDR4QRf.jpg", "/images/6B3VDKS11EDR4Q-preshooting-6B3VDKS11EDR4QRb.jpg"],
+    ecommImages: [],
+    detailImage: "/images/6B3VDKS11EDR4Q-preshooting-6B3VDKS11EDR4QRd.jpg",
+  },
+
+  {
+    sku: "6B3VDKS01EDWVU",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Gold/crystal",
+    sizes: ["36", "42"],
+    preshootImages: ["/images/6B3VDKS01EDWVU-preshooting-6B3VDKS01EDWVURf.jpg", "/images/6B3VDKS01EDWVU-preshooting-6B3VDKS01EDWVURb.jpg"],
+    ecommImages: [],
+    detailImage: "/images/6B3VDKS01EDWVU-preshooting-6B3VDKS01EDWVURd.jpg",
+  },
+
+  {
+    sku: "6B3VDKR01MMR6J",
+    description: "Abito lungo ricamato in cady couture",
+    colorDesc: "Soil orange/multicolor",
+    sizes: ["36", "38"],
+    preshootImages: ["/images/6B3VDKR01MMR6J-preshooting-6B3VDKR01MMR6JRf.jpg", "/images/6B3VDKR01MMR6J-preshooting-6B3VDKR01MMR6JRb.jpg"],
+    ecommImages: ["/images/6B3VDKR01MMR6J-ecommerce-6B3VDKR01MMR6JF.jpg", "/images/6B3VDKR01MMR6J-ecommerce-6B3VDKR01MMR6JR.jpg"],
+    detailImage: "/images/6B3VDKR01MMR6J-ecommerce-6B3VDKR01MMR6JD.jpg",
+  },
+
+  {
+    sku: "6B3VDKJ51MHR9M",
+    description: "Gown in georgette",
+    colorDesc: "Paris",
+    sizes: ["36", "38", "40", "42", "44", "46", "48"],
+    preshootImages: [],
+    ecommImages: ["/images/6B3VDKJ51MHR9M-ecommerce-6B3VDKJ51MHR9MF.jpg", "/images/6B3VDKJ51MHR9M-ecommerce-6B3VDKJ51MHR9MR.jpg"],
+    detailImage: "/images/6B3VDKJ51MHR9M-ecommerce-6B3VDKJ51MHR9MD.jpg",
+  },
+
+  {
+    sku: "6B3VDKJ51MHR1B",
+    description: "Gown in georgette",
+    colorDesc: "Purple orchid",
+    sizes: ["40", "42"],
+    preshootImages: ["/images/6B3VDKJ51MHR1B-preshooting-6B3VDKJ51MHR1BRf.jpg", "/images/6B3VDKJ51MHR1B-preshooting-6B3VDKJ51MHR1BRb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "6B3VDKJ01C8S13",
+    description: "Abito lungo ricamato in organza",
+    colorDesc: "Silver",
+    sizes: ["36", "40", "46"],
+    preshootImages: ["/images/6B3VDKJ01C8S13-preshooting-6B3VDKJ01C8S13Rf.jpg", "/images/6B3VDKJ01C8S13-preshooting-6B3VDKJ01C8S13Rb.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "6B3VDKH00WB534",
+    description: "Abito lungo ricamato in light georgette",
+    colorDesc: "Nut",
+    sizes: ["36", "38", "40", "42"],
+    preshootImages: ["/images/6B3VDKH00WB534-preshooting-6B3VDKH00WB534Rf.jpg", "/images/6B3VDKH00WB534-preshooting-6B3VDKH00WB534Rb.jpg"],
+    ecommImages: ["/images/6B3VDKH00WB534-ecommerce-6B3VDKH00WB534F.jpg", "/images/6B3VDKH00WB534-ecommerce-6B3VDKH00WB534R.jpg"],
+    detailImage: "/images/6B3VDKH00WB534-ecommerce-6B3VDKH00WB534D.jpg",
+  },
+
+  {
+    sku: "6B0VDLD09B7AVW",
+    description: "Abito lungo ricamato in light georgette micro pois plusdepois",
+    colorDesc: "Ocre/blu/betulla",
+    sizes: ["36", "40", "42"],
+    preshootImages: ["/images/6B0VDLD09B7AVW-preshooting-6B0VDLD09B7AVWRf.jpg", "/images/6B0VDLD09B7AVW-preshooting-6B0VDLD09B7AVWRb.jpg", "/images/6B0VDLD09B7AVW-preshooting-6B0VDLD09B7AVWRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/6B0VDLD09B7AVW-preshooting-6B0VDLD09B7AVWRd.jpg",
+  },
+
+  {
+    sku: "6B0VDL951ED626",
+    description: "Abtio lungo ricamato in tulle illusione",
+    colorDesc: "Skin+multicolor",
+    sizes: ["40", "44"],
+    preshootImages: ["/images/6B0VDL951ED626-preshooting-6B0VDL951ED626Rf.jpg", "/images/6B0VDL951ED626-preshooting-6B0VDL951ED626Rb.jpg", "/images/6B0VDL951ED626-preshooting-6B0VDL951ED626Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "6B0VDL81981TB1",
+    description: "Gown in chiffon micro pois plusdepois",
+    colorDesc: "Nero/betulla",
+    sizes: ["40", "42"],
+    preshootImages: ["/images/6B0VDL81981TB1-preshooting-6B0VDL81981TB1Rf.jpg", "/images/6B0VDL81981TB1-preshooting-6B0VDL81981TB1Rb.jpg", "/images/6B0VDL81981TB1-preshooting-6B0VDL81981TB1Rs.jpg"],
+    ecommImages: ["/images/6B0VDL81981TB1-ecommerce-6B0VDL81981TB1F.jpg", "/images/6B0VDL81981TB1-ecommerce-6B0VDL81981TB1R.jpg"],
+    detailImage: "/images/6B0VDL81981TB1-ecommerce-6B0VDL81981TB1D.jpg",
+  },
+
+  {
+    sku: "6B0VDL501EDDTG",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Nude/dirty sage",
+    sizes: ["40", "42", "44"],
+    preshootImages: ["/images/6B0VDL501EDDTG-preshooting-6B0VDL501EDDTGRf.jpg", "/images/6B0VDL501EDDTG-preshooting-6B0VDL501EDDTGRb.jpg", "/images/6B0VDL501EDDTG-preshooting-6B0VDL501EDDTGRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/6B0VDL501EDDTG-preshooting-6B0VDL501EDDTGRd.jpg",
+  },
+
+  {
+    sku: "6B0VDL421ED0P9",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Army/gold",
+    sizes: ["40", "42"],
+    preshootImages: ["/images/6B0VDL421ED0P9-preshooting-6B0VDL421ED0P9Rf.jpg", "/images/6B0VDL421ED0P9-preshooting-6B0VDL421ED0P9Rb.jpg", "/images/6B0VDL421ED0P9-preshooting-6B0VDL421ED0P9Rs.jpg"],
+    ecommImages: ["/images/6B0VDL421ED0P9-ecommerce-6B0VDL421ED0P9F.jpg", "/images/6B0VDL421ED0P9-ecommerce-6B0VDL421ED0P9R.jpg"],
+    detailImage: "/images/6B0VDL421ED0P9-ecommerce-6B0VDL421ED0P9D.jpg",
+  },
+
+  {
+    sku: "6B0VDL302UPR9M",
+    description: "Gown in chiffon",
+    colorDesc: "Paris",
+    sizes: ["38", "40", "42"],
+    preshootImages: ["/images/6B0VDL302UPR9M-preshooting-6B0VDL302UPR9MRf.jpg", "/images/6B0VDL302UPR9M-preshooting-6B0VDL302UPR9MRb.jpg", "/images/6B0VDL302UPR9M-preshooting-6B0VDL302UPR9MRs.jpg"],
+    ecommImages: ["/images/6B0VDL302UPR9M-ecommerce-6B0VDL302UPR9MF.jpg", "/images/6B0VDL302UPR9M-ecommerce-6B0VDL302UPR9MR.jpg"],
+    detailImage: "/images/6B0VDL302UPR9M-ecommerce-6B0VDL302UPR9MD.jpg",
+  },
+
+  {
+    sku: "6B0VDL1793MET5",
+    description: "Gown in light georgette",
+    colorDesc: "Betulla",
+    sizes: ["40", "42", "46"],
+    preshootImages: ["/images/6B0VDL1793MET5-preshooting-6B0VDL1793MET5Rf.jpg", "/images/6B0VDL1793MET5-preshooting-6B0VDL1793MET5Rb.jpg", "/images/6B0VDL1793MET5-preshooting-6B0VDL1793MET5Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "6B0VDL159B7R8E",
+    description: "Gown in light georgette micro pois plusdepois",
+    colorDesc: "Betulla/nero",
+    sizes: ["38", "40", "44"],
+    preshootImages: ["/images/6B0VDL159B7R8E-preshooting-6B0VDL159B7R8ERf.jpg", "/images/6B0VDL159B7R8E-preshooting-6B0VDL159B7R8ERb.jpg", "/images/6B0VDL159B7R8E-preshooting-6B0VDL159B7R8ERs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "6B0VDKX61EDDTA",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Brilliant rose",
+    sizes: ["38", "42"],
+    preshootImages: ["/images/6B0VDKX61EDDTA-preshooting-6B0VDKX61EDDTARf.jpg", "/images/6B0VDKX61EDDTA-preshooting-6B0VDKX61EDDTARb.jpg", "/images/6B0VDKX61EDDTA-preshooting-6B0VDKX61EDDTARs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "6B0VDKR71C8D0Y",
+    description: "Abito lungo ricamato in organza",
+    colorDesc: "Papyrus/multicolor",
+    sizes: ["40", "42"],
+    preshootImages: ["/images/6B0VDKR71C8D0Y-preshooting-6B0VDKR71C8D0YRf.jpg", "/images/6B0VDKR71C8D0Y-preshooting-6B0VDKR71C8D0YRb.jpg", "/images/6B0VDKR71C8D0Y-preshooting-6B0VDKR71C8D0YRs.jpg"],
+    ecommImages: ["/images/6B0VDKR71C8D0Y-ecommerce-6B0VDKR71C8D0YF.jpg", "/images/6B0VDKR71C8D0Y-ecommerce-6B0VDKR71C8D0YR.jpg"],
+    detailImage: "/images/6B0VDKR71C8D0Y-ecommerce-6B0VDKR71C8D0YD.jpg",
+  },
+
+  {
+    sku: "5B3VDJT51MMWQU",
+    description: "Abito lungo ricamato in cady couture",
+    colorDesc: "Edera/strass",
+    sizes: ["36"],
+    preshootImages: ["/images/5B3VDJT51MMWQU-preshooting-5B3VDJT51MMWQURf.jpg", "/images/5B3VDJT51MMWQU-preshooting-5B3VDJT51MMWQURb.jpg", "/images/5B3VDJT51MMWQU-preshooting-5B3VDJT51MMWQURs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "5B3VDJS58NB0NO",
+    description: "Abito lungo ricamato in pizzo",
+    colorDesc: "Nero",
+    sizes: ["38", "40"],
+    preshootImages: ["/images/5B3VDJS58NB0NO-preshooting-5B3VDJS58NB0NORf.jpg", "/images/5B3VDJS58NB0NO-preshooting-5B3VDJS58NB0NORb.jpg", "/images/5B3VDJS58NB0NO-preshooting-5B3VDJS58NB0NORs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/5B3VDJS58NB0NO-preshooting-5B3VDJS58NB0NORd.jpg",
+  },
+
+  {
+    sku: "5B3VDJH51ED0NO",
+    description: "Gown in tulle illusione",
+    colorDesc: "Nero",
+    sizes: ["36", "44"],
+    preshootImages: ["/images/5B3VDJH51ED0NO-preshooting-5B3VDJH51ED0NORf.jpg", "/images/5B3VDJH51ED0NO-preshooting-5B3VDJH51ED0NORb.jpg", "/images/5B3VDJH51ED0NO-preshooting-5B3VDJH51ED0NORs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/5B3VDJH51ED0NO-preshooting-5B3VDJH51ED0NORd.jpg",
+  },
+
+  {
+    sku: "5B3VDJG51ED157",
+    description: "Gown in tulle illusione",
+    colorDesc: "Rosso",
+    sizes: ["40", "42", "44", "46"],
+    preshootImages: ["/images/5B3VDJG51ED157-preshooting-5B3VDJG51ED157Rf.jpg", "/images/5B3VDJG51ED157-preshooting-5B3VDJG51ED157Rb.jpg", "/images/5B3VDJG51ED157-preshooting-5B3VDJG51ED157Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "5B3VDJD02UPC68",
+    description: "Gown in chiffon",
+    colorDesc: "Celadon",
+    sizes: ["36", "38", "40", "42", "44"],
+    preshootImages: ["/images/5B3VDJD02UPC68-preshooting-5B3VDJD02UPC68Rf.jpg", "/images/5B3VDJD02UPC68-preshooting-5B3VDJD02UPC68Rb.jpg", "/images/5B3VDJD02UPC68-preshooting-5B3VDJD02UPC68Rs.jpg"],
+    ecommImages: ["/images/5B3VDJD02UPC68-ecommerce-5B3VDJD02UPC68F.jpg", "/images/5B3VDJD02UPC68-ecommerce-5B3VDJD02UPC68R.jpg"],
+    detailImage: "/images/5B3VDJD02UPC68-ecommerce-5B3VDJD02UPC68D.jpg",
+  },
+
+  {
+    sku: "5B3VDJC02UP157",
+    description: "Gown in chiffon",
+    colorDesc: "Rosso",
+    sizes: ["40", "42", "46"],
+    preshootImages: ["/images/5B3VDJC02UP157-preshooting-5B3VDJC02UP157Rf.jpg", "/images/5B3VDJC02UP157-preshooting-5B3VDJC02UP157Rb.jpg", "/images/5B3VDJC02UP157-preshooting-5B3VDJC02UP157Rs.jpg"],
+    ecommImages: ["/images/5B3VDJC02UP157-ecommerce-5B3VDJC02UP157F.jpg"],
+    detailImage: "/images/5B3VDJC02UP157-ecommerce-5B3VDJC02UP157D.jpg",
+  },
+
+  {
+    sku: "5B3VDJ851EDA03",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Avorio",
+    sizes: ["38", "40", "44", "46"],
+    preshootImages: ["/images/5B3VDJ851EDA03-preshooting-5B3VDJ851EDA03Rf.jpg", "/images/5B3VDJ851EDA03-preshooting-5B3VDJ851EDA03Rb.jpg", "/images/5B3VDJ851EDA03-preshooting-5B3VDJ851EDA03Rs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/5B3VDJ851EDA03-preshooting-5B3VDJ851EDA03Rd.jpg",
+  },
+
+  {
+    sku: "5B0VDK251MM157",
+    description: "Gown in cady couture",
+    colorDesc: "Rosso",
+    sizes: ["36"],
+    preshootImages: [],
+    ecommImages: ["/images/5B0VDK251MM157-ecommerce-5B0VDK251MM157F.jpg"],
+    detailImage: null,
+  },
+
+  {
+    sku: "5B0VDJ961EDFU4",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Fume'",
+    sizes: ["38", "40"],
+    preshootImages: ["/images/5B0VDJ961EDFU4-preshooting-5B0VDJ961EDFU4Rf.jpg", "/images/5B0VDJ961EDFU4-preshooting-5B0VDJ961EDFU4Rb.jpg", "/images/5B0VDJ961EDFU4-preshooting-5B0VDJ961EDFU4Rs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/5B0VDJ961EDFU4-preshooting-5B0VDJ961EDFU4Rd.jpg",
+  },
+
+  {
+    sku: "4B3VDHE02UPZYT",
+    description: "Gown in chiffon",
+    colorDesc: "Summer pink",
+    sizes: ["36", "38", "40", "44", "46"],
+    preshootImages: ["/images/4B3VDHE02UPZYT-preshooting-4B3VDHE02UPZYTRf.jpg", "/images/4B3VDHE02UPZYT-preshooting-4B3VDHE02UPZYTRb.jpg", "/images/4B3VDHE02UPZYT-preshooting-4B3VDHE02UPZYTRs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "4B3VDH151MM157",
+    description: "Gown in cady couture",
+    colorDesc: "Rosso",
+    sizes: ["36", "38", "40", "42"],
+    preshootImages: ["/images/4B3VDH151MM157-preshooting-4B3VDH151MM157Rf.jpg", "/images/4B3VDH151MM157-preshooting-4B3VDH151MM157Rb.jpg", "/images/4B3VDH151MM157-preshooting-4B3VDH151MM157Rs.jpg"],
+    ecommImages: ["/images/4B3VDH151MM157-ecommerce-4B3VDH151MM157F.jpg", "/images/4B3VDH151MM157-ecommerce-4B3VDH151MM157R.jpg"],
+    detailImage: "/images/4B3VDH151MM157-ecommerce-4B3VDH151MM157D.jpg",
+  },
+
+  {
+    sku: "3B3VDGD01C8A03",
+    description: "Abito lungo ricamato in organza",
+    colorDesc: "Avorio",
+    sizes: ["38", "40"],
+    preshootImages: ["/images/3B3VDGD01C8A03-preshooting-3B3VDGD01C8A03Rf.jpg", "/images/3B3VDGD01C8A03-preshooting-3B3VDGD01C8A03Rb.jpg", "/images/3B3VDGD01C8A03-preshooting-3B3VDGD01C8A03Rs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/3B3VDGD01C8A03-preshooting-3B3VDGD01C8A03Rd.jpg",
+  },
+
+  {
+    sku: "3B3VDG051MM0NA",
+    description: "Gown in cady couture",
+    colorDesc: "Nero/avorio",
+    sizes: ["38", "40", "44"],
+    preshootImages: ["/images/3B3VDG051MM0NA-preshooting-3B3VDG051MM0NARf.jpg", "/images/3B3VDG051MM0NA-preshooting-3B3VDG051MM0NARs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "3B3VDFQ01C81ZM",
+    description: "Abito lungo ricamato in organza",
+    colorDesc: "Praline/silver",
+    sizes: ["38", "44"],
+    preshootImages: ["/images/3B3VDFQ01C81ZM-preshooting-3B3VDFQ01C81ZMRf.jpg", "/images/3B3VDFQ01C81ZM-preshooting-3B3VDFQ01C81ZMRb.jpg", "/images/3B3VDFQ01C81ZM-preshooting-3B3VDFQ01C81ZMRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/3B3VDFQ01C81ZM-preshooting-3B3VDFQ01C81ZMRd.jpg",
+  },
+
+  {
+    sku: "3B0VDGV51EDZKQ",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Yellow mint",
+    sizes: ["42", "44"],
+    preshootImages: ["/images/3B0VDGV51EDZKQ-preshooting-3B0VDGV51EDZKQRf.jpg", "/images/3B0VDGV51EDZKQ-preshooting-3B0VDGV51EDZKQRb.jpg", "/images/3B0VDGV51EDZKQ-preshooting-3B0VDGV51EDZKQRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/3B0VDGV51EDZKQ-preshooting-3B0VDGV51EDZKQRd.jpg",
+  },
+
+  {
+    sku: "2B3VDEX01EDJZK",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Powder green/silver",
+    sizes: ["38", "42"],
+    preshootImages: ["/images/2B3VDEX01EDJZK-preshooting-2B3VDEX01EDJZKRf.jpg", "/images/2B3VDEX01EDJZK-preshooting-2B3VDEX01EDJZKRb.jpg", "/images/2B3VDEX01EDJZK-preshooting-2B3VDEX01EDJZKRs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/2B3VDEX01EDJZK-preshooting-2B3VDEX01EDJZKRd.jpg",
+  },
+
+  {
+    sku: "2B3VDEL52UP32D",
+    description: "Gown in chiffon",
+    colorDesc: "Powder green",
+    sizes: ["42", "44"],
+    preshootImages: ["/images/2B3VDEL52UP32D-preshooting-2B3VDEL52UP32DRf.jpg", "/images/2B3VDEL52UP32D-preshooting-2B3VDEL52UP32DRb.jpg", "/images/2B3VDEL52UP32D-preshooting-2B3VDEL52UP32DRs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "2B3VDEK01MM0NO",
+    description: "Gown in cady couture",
+    colorDesc: "Nero",
+    sizes: ["38", "40", "42", "44", "46"],
+    preshootImages: ["/images/2B3VDEK01MM0NO-preshooting-2B3VDEK01MM0NORf.jpg", "/images/2B3VDEK01MM0NO-preshooting-2B3VDEK01MM0NORb.jpg", "/images/2B3VDEK01MM0NO-preshooting-2B3VDEK01MM0NORs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "1B3VDDW52UP157",
+    description: "Abito lungo in chiffon",
+    colorDesc: "Rosso",
+    sizes: ["36", "40", "42", "46"],
+    preshootImages: ["/images/1B3VDDW52UP157-preshooting-1B3VDDW52UP157Rf.jpg", "/images/1B3VDDW52UP157-preshooting-1B3VDDW52UP157Rb.jpg", "/images/1B3VDDW52UP157-preshooting-1B3VDDW52UP157Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "1B3VDDR02UP496",
+    description: "Abito lungo in chiffon",
+    colorDesc: "Pesca",
+    sizes: ["40", "42", "44", "46"],
+    preshootImages: ["/images/1B3VDDR02UP496-preshooting-1B3VDDR02UP496Rf.jpg", "/images/1B3VDDR02UP496-preshooting-1B3VDDR02UP496Rb.jpg", "/images/1B3VDDR02UP496-preshooting-1B3VDDR02UP496Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "1B3VDDL11ED0NO",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Nero",
+    sizes: ["36", "44"],
+    preshootImages: ["/images/1B3VDDL11ED0NO-preshooting-1B3VDDL11ED0NORf.jpg", "/images/1B3VDDL11ED0NO-preshooting-1B3VDDL11ED0NORb.jpg", "/images/1B3VDDL11ED0NO-preshooting-1B3VDDL11ED0NORs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/1B3VDDL11ED0NO-preshooting-1B3VDDL11ED0NORd.jpg",
+  },
+
+  {
+    sku: "1B3VDDK31EDU48",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Avorio/silver",
+    sizes: ["36", "40", "44"],
+    preshootImages: ["/images/1B3VDDK31EDU48-preshooting-1B3VDDK31EDU48Rf.jpg", "/images/1B3VDDK31EDU48-preshooting-1B3VDDK31EDU48Rb.jpg", "/images/1B3VDDK31EDU48-preshooting-1B3VDDK31EDU48Rs.jpg"],
+    ecommImages: [],
+    detailImage: null,
+  },
+
+  {
+    sku: "1B3VDDK11EDA03",
+    description: "Abito lungo ricamato in tulle illusione",
+    colorDesc: "Avorio",
+    sizes: ["42", "44", "46"],
+    preshootImages: ["/images/1B3VDDK11EDA03-preshooting-1B3VDDK11EDA03Rf.jpg", "/images/1B3VDDK11EDA03-preshooting-1B3VDDK11EDA03Rb.jpg", "/images/1B3VDDK11EDA03-preshooting-1B3VDDK11EDA03Rs.jpg"],
+    ecommImages: [],
+    detailImage: "/images/1B3VDDK11EDA03-preshooting-1B3VDDK11EDA03Rd.jpg",
+  },
+
+];
+
+// Get all image paths for a product: preshooting first, then ecommerce, then detail
+export function getAllImagePaths(product: Product): string[] {
+  const paths: string[] = [...product.preshootImages, ...product.ecommImages];
+  if (product.detailImage) {
+    paths.push(product.detailImage);
+  }
+  return paths;
+}
+
+// Get thumbnail for grid view
+export function getThumbnailPath(product: Product): string {
+  if (product.detailImage) {
+    return product.detailImage;
+  }
+  if (product.preshootImages.length > 0) {
+    return product.preshootImages[0];
+  }
+  if (product.ecommImages.length > 0) {
+    return product.ecommImages[0];
+  }
+  return "";
+}

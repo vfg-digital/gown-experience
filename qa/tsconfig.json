@@ -1,0 +1,18 @@
+﻿{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "js",
+    "rootDir": ".."
+  },
+  "include": [
+    "gown-names.ts",
+    "i18n-check.ts",
+    "../src/analytics/normalize.ts",
+    "../src/data/products.ts",
+    "../src/data/translations.ts"
+  ]
+}

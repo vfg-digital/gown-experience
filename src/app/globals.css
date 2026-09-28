@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-butter: #fff3e5;
+  }
+
+  @font-face {
+    font-family: 'DIN Pro';
+    src: url('/fonts/DINPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'DIN Pro';
+    src: url('/fonts/DINPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DIN Pro', sans-serif;
+    font-weight: 500;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Times New Roman", Times, serif;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Sequential fade-in from below */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fade-in-up 1s ease-out forwards;
+}
+
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-600 { animation-delay: 600ms; }
+.animate-delay-800 { animation-delay: 800ms; }
+.animate-delay-1200 { animation-delay: 1200ms; }
+
+/* Fade-out upward for exit */
+@keyframes fade-out-up {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+}
+
+.animate-fade-out-up {
+  animation: fade-out-up 0.4s ease-in forwards;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+.animate-fade-in-slow {
+  animation: fade-in 1.2s ease-out forwards;
+}
+
+/* Hero overlay dissolve */
+.hero-dissolve {
+  transition: opacity 0.8s ease-out, backdrop-filter 0.8s ease-out;
+}
+
+.hero-dissolve-out {
+  opacity: 0 !important;
+  backdrop-filter: blur(0px) !important;
+}
+
+/* Welcome text line-by-line animation */
+.welcome-line-1 {
+  opacity: 0;
+  animation: fade-in-up 0.8s ease-out 0.3s forwards;
+}
+
+.welcome-line-2 {
+  opacity: 0;
+  animation: fade-in-up 0.8s ease-out 0.8s forwards;
+}
+
+/* Colore del testo digitato nei campi di accesso: il nome e i pallini della
+   chiave usano lo stesso grigio, coerente con bordi e icone.
+   .access-ink e' l'alias per i campi non mascherati, come il nome. */
+.password-dots,
+.access-ink {
+  color: rgba(0, 0, 0, 0.25);
+  caret-color: rgba(0, 0, 0, 0.4);
+  transition: color 0.4s ease;
+}
+
+/* Accesso accettato: il testo dei campi diventa bianco luminoso.
+   .access-ink-glow e' l'alias per il campo nome, non mascherato. */
+.password-dots-glow,
+.access-ink-glow {
+  color: white;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 16px rgba(255, 255, 255, 0.5);
+  border-color: white !important;
+}
+
+/* Glow on the entire input line */
+.glow-line {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+}
+
+/* ==========================================================================
+   Cambio pagina del Gowns Book: dissolvenza attraverso il bianco
+
+   Una creazione per pagina. Il passaggio da una all'altra e' una dissolvenza
+   in due tempi: nella prima meta' la foto corrente svanisce sul bianco, per un
+   istante lo schermo e' bianco pieno, nella seconda la foto successiva emerge
+   dal bianco. Nessuna rotazione, nessuno zoom, nessuno scorrimento, nessuno
+   spostamento, solo opacita'.
+
+   Il bianco intermedio e' il fondo dello stage: quando entrambi gli strati
+   hanno opacita' zero non resta che il bianco. Non serve un terzo strato.
+
+   L'opacita' e' pilotata da React con un unico valore di avanzamento da 0 a 1,
+   cosi' lo stesso codice serve al trascinamento e all'animazione dei pulsanti,
+   e il passaggio e' identico in avanti e indietro perche' dipende solo
+   dall'avanzamento, mai dal verso.
+   ========================================================================== */
+
+.flip-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.flip-layer {
+  position: absolute;
+  inset: 0;
+}
+
+/* Pagina in dissolvenza: cambia solo opacita'. will-change la promuove a un
+   proprio livello di composizione, cosi' la sfumatura resta fluida e non
+   sfarfalla. */
+.flip-leaf {
+  position: absolute;
+  inset: 0;
+  will-change: opacity;
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  /* La pagina e' opaca: dove la fotografia non copre non deve trasparire nulla. */
+  background-color: #ffffff;
+}
