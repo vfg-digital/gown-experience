@@ -47,7 +47,7 @@ export default function MenuScreen({
       {/* Content - centered vertically */}
       <div className="relative z-10 min-h-screen flex flex-col justify-center px-6 md:px-12">
         {/* Welcome text */}
-        <p className="font-serif text-2xl md:text-4xl text-black/80 italic leading-snug mb-14 max-w-lg animate-fade-in-up">
+        <p className="font-serif text-[12px] text-black/80 italic leading-snug mb-14 max-w-lg animate-fade-in-up">
           {guestName
             ? `Welcome ${guestName} to a world of exceptional beauty, extraordinary creations and masterful craft.`
             : "Welcome to a world of exceptional beauty, extraordinary creations and masterful craft."}

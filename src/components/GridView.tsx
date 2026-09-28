@@ -33,7 +33,9 @@ export default function GridView({ products, onSelectProduct, highlightSku }: Gr
           From our Atelier, to you.
         </h1>
         <p className="font-serif text-base md:text-lg text-black italic leading-relaxed">
-          Explore each creation and save your favorites along the way.
+          Explore each creation and save your favorites
+          <br />
+          along the way.
         </p>
       </div>
 
