@@ -2116,19 +2116,31 @@ export function getAllImagePaths(product: Product): string[] {
   return paths;
 }
 
+// Larghezza della rendition Thron usata per le thumbnail della griglia (Gowns
+// Closet). Le immagini a catalogo sono a 1280px (~330 KB), ma la cella di
+// griglia e' larga ~180-350px: 600px coprono anche il retina e pesano ~5-6x di
+// meno (~58 KB). La sostituzione avviene a runtime, solo sull'URL della
+// thumbnail: il catalogo resta a 1280 per la scheda prodotto. Per alleggerire
+// ulteriormente si puo' passare a "400x0".
+const GRID_THUMB_SIZE = "600x0";
+
+// Riduce la rendition Thron all'inquadratura della griglia. Le immagini locali
+// (senza il token /std/1280x0/) non contengono il pattern e restano invariate.
+function toGridRendition(url: string): string {
+  return url.replace("/std/1280x0/", `/std/${GRID_THUMB_SIZE}/`);
+}
+
 // Get thumbnail for grid view (Gowns Closet): the detail of each item.
 export function getThumbnailPath(product: Product): string {
+  let path = "";
   if (product.closetImage) {
-    return product.closetImage;
+    path = product.closetImage;
+  } else if (product.detailImage) {
+    path = product.detailImage;
+  } else if (product.preshootImages.length > 0) {
+    path = product.preshootImages[0];
+  } else if (product.ecommImages.length > 0) {
+    path = product.ecommImages[0];
   }
-  if (product.detailImage) {
-    return product.detailImage;
-  }
-  if (product.preshootImages.length > 0) {
-    return product.preshootImages[0];
-  }
-  if (product.ecommImages.length > 0) {
-    return product.ecommImages[0];
-  }
-  return "";
+  return path ? toGridRendition(path) : "";
 }
