@@ -33,6 +33,14 @@ export default function Home() {
   // o partire dall'alto (primo ingresso). Vedi highlightSku piu' sotto.
   const [selectedProductIndex, setSelectedProductIndex] = useState<number | null>(null);
   const [sharedSkus, setSharedSkus] = useState<string[]>([]);
+  // Vista da cui si e' aperta la wishlist, per far tornare il "back" esattamente
+  // li'. La wishlist e' raggiungibile dalla stella dell'header su qualsiasi
+  // schermata (Savoir-Faire, Gowns Closet, scheda), quindi la destinazione del
+  // ritorno non e' fissa e va ricordata all'apertura.
+  const [wishlistReturn, setWishlistReturn] = useState<{
+    viewMode: ViewMode;
+    detailOrigin: DetailOrigin;
+  } | null>(null);
   // Nome inserito all'accesso. Vive solo in memoria per la sessione: serve
   // unicamente al saluto nel menu, non viene salvato ne trasmesso.
   const [guestName, setGuestName] = useState("");
@@ -223,9 +231,25 @@ export default function Home() {
   }, [pushHistory]);
 
   const handleGoToWishlist = useCallback(() => {
+    // Ricorda la schermata corrente prima di passare alla wishlist, cosi' il
+    // "back" della wishlist puo' riportarci esattamente qui.
+    setWishlistReturn({ viewMode, detailOrigin });
     setViewMode("wishlist");
     pushHistory("browsing", "wishlist");
-  }, [pushHistory]);
+  }, [viewMode, detailOrigin, pushHistory]);
+
+  // Back dalla wishlist: torna alla schermata da cui era stata aperta. Se per
+  // qualche motivo non e' stata memorizzata (es. ingresso diretto), ripiega sul
+  // Gowns Closet, la vista di default del browsing.
+  const handleBackFromWishlist = useCallback(() => {
+    const target = wishlistReturn ?? {
+      viewMode: "gowns-closet" as ViewMode,
+      detailOrigin: "gowns-closet" as DetailOrigin,
+    };
+    setDetailOrigin(target.detailOrigin);
+    setViewMode(target.viewMode);
+    pushHistory("browsing", target.viewMode, target.detailOrigin);
+  }, [wishlistReturn, pushHistory]);
 
   const handleGoHome = useCallback(() => {
     setAppState("menu");
@@ -257,12 +281,12 @@ export default function Home() {
           onGoToMenu={handleGoToMenu}
           onGoToWishlist={handleGoToWishlist}
           onGoHome={handleGoHome}
-          // Back a sinistra su Savoir-Faire / Gowns Closet (-> menu) e su PDP
-          // (-> Gowns Closet, ancorato al prodotto). Sulla wishlist resta il
-          // menu hamburger (onBack assente).
+          // Back a sinistra su tutte le schermate del browsing: Savoir-Faire /
+          // Gowns Closet (-> menu), PDP (-> Gowns Closet, ancorato al prodotto)
+          // e wishlist (-> schermata da cui era stata aperta).
           onBack={
             viewMode === "wishlist"
-              ? undefined
+              ? handleBackFromWishlist
               : viewMode === "gowns-book"
               ? handleBackToCloset
               : handleGoToMenu
