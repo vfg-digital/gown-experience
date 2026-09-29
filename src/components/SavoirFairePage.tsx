@@ -152,7 +152,7 @@ export default function SavoirFairePage() {
 
       {/* Section 2: Text paragraph */}
       <div className="px-10 pb-8">
-        <p className="font-sans text-[10px] text-black leading-relaxed font-normal">
+        <p className="font-sans text-[14px] text-black leading-[18px] font-normal">
           At the heart of Valentino lies a savoir-faire shaped by time, precision and an unwavering pursuit of beauty. Within the Maison de Couture in Rome, exceptional techniques are passed from hand to hand, evolving through generations while remaining deeply connected to their origins.
         </p>
       </div>
@@ -170,7 +170,7 @@ export default function SavoirFairePage() {
 
       {/* Section 4: Text paragraph */}
       <div className="px-10 py-8">
-        <p className="font-sans text-[10px] text-black leading-relaxed font-normal">
+        <p className="font-sans text-[14px] text-black leading-[18px] font-normal">
           Every gesture carries this legacy forward. From the smallest detail to the most intricate construction, each creation takes form through precision, intuition and the human hand - bringing imagination to life in a way that is unmistakably Valentino.
         </p>
       </div>
@@ -188,7 +188,7 @@ export default function SavoirFairePage() {
 
       {/* Section 7: Text paragraph */}
       <div className="px-10 pb-8">
-        <p className="font-sans text-[10px] text-black leading-relaxed font-normal">
+        <p className="font-sans text-[14px] text-black leading-[18px] font-normal">
           Behind every creation are the remarkable people who bring it to life. Their knowledge, precision and sensitivity are expressed through countless hours of meticulous work, where every detail is considered and every gesture has purpose. From the most intricate embroidery to the construction of a silhouette, time becomes an essential part of every creation. It is this extraordinary dedication - passed from hand to hand and generation to generation - that gives each Valentino creation its singular character.
         </p>
       </div>
