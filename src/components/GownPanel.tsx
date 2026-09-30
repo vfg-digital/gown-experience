@@ -114,10 +114,21 @@ export default function GownPanel({
             {title}, color {color}
           </h2>
 
-          {/* Product code */}
-          <p className="font-sans text-[11px] text-black/60 mb-8">
-            {product.sku}
-          </p>
+          {/* Codice prodotto + taglie disponibili. Le taglie vengono dal campo
+              product.sizes, generato dal foglio DB dell'Excel SOH: quel foglio
+              contiene solo righe con stock (SOH>0), quindi sono gia' le taglie
+              disponibili. Stesso font del codice. */}
+          <div className="mb-8">
+            <p className="font-sans text-[11px] text-black/60">
+              {product.sku}
+            </p>
+            {product.sizes.length > 0 && (
+              <p className="font-sans text-[11px] text-black/60 mt-2">
+                Available sizes:{" "}
+                {[...product.sizes].sort((a, b) => Number(a) - Number(b)).join(", ")}
+              </p>
+            )}
+          </div>
 
           {/* Wishlist toggle */}
           <button
