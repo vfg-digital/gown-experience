@@ -234,9 +234,17 @@ export default function Home() {
     // Ricorda la schermata corrente prima di passare alla wishlist, cosi' il
     // "back" della wishlist puo' riportarci esattamente qui.
     setWishlistReturn({ viewMode, detailOrigin });
+    // Da una scheda si puo' essere sfogliati con le frecce fino a un'altra
+    // creazione (detailProductIndex) rispetto a quella aperta all'inizio
+    // (selectedProductIndex). La scheda, al ritorno, si rimonta leggendo
+    // selectedProductIndex: allineo qui i due indici cosi' il back riapre sulla
+    // creazione effettivamente a schermo (es. gown 10), non su quella iniziale.
+    if (viewMode === "gowns-book") {
+      setSelectedProductIndex(detailProductIndex);
+    }
     setViewMode("wishlist");
     pushHistory("browsing", "wishlist");
-  }, [viewMode, detailOrigin, pushHistory]);
+  }, [viewMode, detailOrigin, detailProductIndex, pushHistory]);
 
   // Back dalla wishlist: torna alla schermata da cui era stata aperta. Se per
   // qualche motivo non e' stata memorizzata (es. ingresso diretto), ripiega sul
@@ -516,8 +524,6 @@ function AccessOverlay({ onAccessGranted }: { onAccessGranted: (name: string) =>
 
       <p className="font-serif font-normal italic text-[20px] leading-[25px] tracking-[-0.03em] text-black/70 mb-8 animate-fade-in-up animate-delay-800">
         Step into a private world of Maison Valentino treasures, reserved for a select few.
-        <br />
-        Your exclusive access key awaits.
       </p>
 
       <form onSubmit={handleAccessSubmit} className="animate-fade-in-up animate-delay-1200">
@@ -571,7 +577,7 @@ function AccessOverlay({ onAccessGranted }: { onAccessGranted: (name: string) =>
             style={{ fontSize: "16px", WebkitTextSecurity: "disc" } as React.CSSProperties}
             autoComplete="off"
             aria-label="Access key"
-            placeholder="Your Access Key"
+            placeholder="Your exclusive access key awaits"
           />
         </div>
 
