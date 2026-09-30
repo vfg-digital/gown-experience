@@ -1,0 +1,571 @@
+{
+  "productCount": 209,
+  "descriptions": [
+    {
+      "raw": "abito lungo ricamato",
+      "display": "Long gown embroidered"
+    },
+    {
+      "raw": "cape",
+      "display": "Cape"
+    },
+    {
+      "raw": "cape - embroidered",
+      "display": "Cape - embroidered"
+    },
+    {
+      "raw": "cape - embroidered with feathers",
+      "display": "Cape - embroidered with feathers"
+    },
+    {
+      "raw": "dress - embroidered",
+      "display": "Dress - embroidered"
+    },
+    {
+      "raw": "embroidered cape",
+      "display": "Embroidered cape"
+    },
+    {
+      "raw": "embroidered cape with feathers",
+      "display": "Embroidered cape with feathers"
+    },
+    {
+      "raw": "embroidered gown",
+      "display": "Embroidered gown"
+    },
+    {
+      "raw": "embroidered gown with feathers",
+      "display": "Embroidered gown with feathers"
+    },
+    {
+      "raw": "embroidered jacket",
+      "display": "Embroidered jacket"
+    },
+    {
+      "raw": "gown",
+      "display": "Gown"
+    },
+    {
+      "raw": "gown - embroidered",
+      "display": "Gown - embroidered"
+    },
+    {
+      "raw": "gown with feathers",
+      "display": "Gown with feathers"
+    }
+  ],
+  "colors": [
+    {
+      "raw": "Absolute rose/silver",
+      "display": "Absolute rose/silver"
+    },
+    {
+      "raw": "Antic green",
+      "display": "Antic green"
+    },
+    {
+      "raw": "Aqua green/silver",
+      "display": "Aqua green/silver"
+    },
+    {
+      "raw": "Army/gold",
+      "display": "Army/gold"
+    },
+    {
+      "raw": "Astral purple/nero",
+      "display": "Astral purple/black"
+    },
+    {
+      "raw": "Aube",
+      "display": "Aube"
+    },
+    {
+      "raw": "Avorio",
+      "display": "Ivory"
+    },
+    {
+      "raw": "Avorio/silver",
+      "display": "Ivory/silver"
+    },
+    {
+      "raw": "Azzurro polvere",
+      "display": "Powder blue"
+    },
+    {
+      "raw": "Betulla",
+      "display": "Birch"
+    },
+    {
+      "raw": "Betulla/lilac",
+      "display": "Birch/lilac"
+    },
+    {
+      "raw": "Betulla/multicolor",
+      "display": "Birch/multicolor"
+    },
+    {
+      "raw": "Betulla/nero",
+      "display": "Birch/black"
+    },
+    {
+      "raw": "Betulla/oro",
+      "display": "Birch/gold"
+    },
+    {
+      "raw": "Blue/gold",
+      "display": "Blue/gold"
+    },
+    {
+      "raw": "Blush rose/gold",
+      "display": "Blush rose/gold"
+    },
+    {
+      "raw": "Bright grapes",
+      "display": "Bright grapes"
+    },
+    {
+      "raw": "Brilliant rose",
+      "display": "Brilliant rose"
+    },
+    {
+      "raw": "Burro/antique silver",
+      "display": "Butter/antique silver"
+    },
+    {
+      "raw": "Celadon",
+      "display": "Celadon"
+    },
+    {
+      "raw": "Champagne",
+      "display": "Champagne"
+    },
+    {
+      "raw": "Clean blue/fuxia red",
+      "display": "Clean blue/fuchsia red"
+    },
+    {
+      "raw": "Cobalt blue",
+      "display": "Cobalt blue"
+    },
+    {
+      "raw": "Crystal red",
+      "display": "Crystal red"
+    },
+    {
+      "raw": "Deep chocolate/betulla/lychee",
+      "display": "Deep chocolate/birch/lychee"
+    },
+    {
+      "raw": "Deep purple",
+      "display": "Deep purple"
+    },
+    {
+      "raw": "Dirty sage",
+      "display": "Dirty sage"
+    },
+    {
+      "raw": "Dirty sage/gold/silver",
+      "display": "Dirty sage/gold/silver"
+    },
+    {
+      "raw": "Dirty sage/multicolor",
+      "display": "Dirty sage/multicolor"
+    },
+    {
+      "raw": "Dust lilac",
+      "display": "Dust lilac"
+    },
+    {
+      "raw": "Edera/strass",
+      "display": "Ivy/strass"
+    },
+    {
+      "raw": "Electric pink/silver",
+      "display": "Electric pink/silver"
+    },
+    {
+      "raw": "Emerald/lurex",
+      "display": "Emerald/lurex"
+    },
+    {
+      "raw": "Fume'",
+      "display": "Smoke"
+    },
+    {
+      "raw": "Glossy/peach rose",
+      "display": "Glossy/peach rose"
+    },
+    {
+      "raw": "Gold",
+      "display": "Gold"
+    },
+    {
+      "raw": "Gold/crystal",
+      "display": "Gold/crystal"
+    },
+    {
+      "raw": "Laurel",
+      "display": "Laurel"
+    },
+    {
+      "raw": "Laurel/multicolor",
+      "display": "Laurel/multicolor"
+    },
+    {
+      "raw": "Lemon",
+      "display": "Lemon"
+    },
+    {
+      "raw": "Light cyan/ nero",
+      "display": "Light cyan/ black"
+    },
+    {
+      "raw": "Lilas",
+      "display": "Lilac"
+    },
+    {
+      "raw": "Lilla/multicolor",
+      "display": "Lilac/multicolor"
+    },
+    {
+      "raw": "Lily violet/ocre/multicolor",
+      "display": "Lily violet/ochre/multicolor"
+    },
+    {
+      "raw": "Lily violet/silver",
+      "display": "Lily violet/silver"
+    },
+    {
+      "raw": "Lime punch/silver/gold",
+      "display": "Lime punch/silver/gold"
+    },
+    {
+      "raw": "Malva",
+      "display": "Mauve"
+    },
+    {
+      "raw": "Malva/silver",
+      "display": "Mauve/silver"
+    },
+    {
+      "raw": "Mauve/dirty sage",
+      "display": "Mauve/dirty sage"
+    },
+    {
+      "raw": "Metallic blue",
+      "display": "Metallic blue"
+    },
+    {
+      "raw": "Metallic orange",
+      "display": "Metallic orange"
+    },
+    {
+      "raw": "Multicolor.",
+      "display": "Multicolor."
+    },
+    {
+      "raw": "Natural rafia/ pale rugiada",
+      "display": "Natural raffia/ pale dew"
+    },
+    {
+      "raw": "Nero",
+      "display": "Black"
+    },
+    {
+      "raw": "Nero lilium/ multicolor",
+      "display": "Black lilium/ multicolor"
+    },
+    {
+      "raw": "Nero+multicolor",
+      "display": "Black+multicolor"
+    },
+    {
+      "raw": "Nero/avorio",
+      "display": "Black/ivory"
+    },
+    {
+      "raw": "Nero/betulla",
+      "display": "Black/birch"
+    },
+    {
+      "raw": "Nero/blue/silver",
+      "display": "Black/blue/silver"
+    },
+    {
+      "raw": "Nero/chocolate",
+      "display": "Black/chocolate"
+    },
+    {
+      "raw": "Nero/gold",
+      "display": "Black/gold"
+    },
+    {
+      "raw": "Nero/gold/silver",
+      "display": "Black/gold/silver"
+    },
+    {
+      "raw": "Nero/malted milk",
+      "display": "Black/malted milk"
+    },
+    {
+      "raw": "Nero/silver",
+      "display": "Black/silver"
+    },
+    {
+      "raw": "Nero/silver/multicolor",
+      "display": "Black/silver/multicolor"
+    },
+    {
+      "raw": "Noisette",
+      "display": "Noisette"
+    },
+    {
+      "raw": "Nude rose",
+      "display": "Nude rose"
+    },
+    {
+      "raw": "Nude/dirty sage",
+      "display": "Nude/dirty sage"
+    },
+    {
+      "raw": "Nude/gold",
+      "display": "Nude/gold"
+    },
+    {
+      "raw": "Nude/multicolor",
+      "display": "Nude/multicolor"
+    },
+    {
+      "raw": "Nut",
+      "display": "Nut"
+    },
+    {
+      "raw": "Ocre/blu/betulla",
+      "display": "Ochre/blue/birch"
+    },
+    {
+      "raw": "Old ivory",
+      "display": "Old ivory"
+    },
+    {
+      "raw": "Old ivory/silver/rose",
+      "display": "Old ivory/silver/rose"
+    },
+    {
+      "raw": "Pale champagne/multicolor",
+      "display": "Pale champagne/multicolor"
+    },
+    {
+      "raw": "Pale green/polvere/antique silver",
+      "display": "Pale green/powder/antique silver"
+    },
+    {
+      "raw": "Papyrus/multicolor",
+      "display": "Papyrus/multicolor"
+    },
+    {
+      "raw": "Paris",
+      "display": "Paris"
+    },
+    {
+      "raw": "Paris/nero",
+      "display": "Paris/black"
+    },
+    {
+      "raw": "Peach",
+      "display": "Peach"
+    },
+    {
+      "raw": "Pesca",
+      "display": "Peach"
+    },
+    {
+      "raw": "Pine/lilac/black",
+      "display": "Pine/lilac/black"
+    },
+    {
+      "raw": "Polvere",
+      "display": "Powder"
+    },
+    {
+      "raw": "Poudre/multicolor",
+      "display": "Powder/multicolor"
+    },
+    {
+      "raw": "Poudre/niliaca",
+      "display": "Powder/niliaca"
+    },
+    {
+      "raw": "Poudre/silver",
+      "display": "Powder/silver"
+    },
+    {
+      "raw": "Powder green/silver",
+      "display": "Powder green/silver"
+    },
+    {
+      "raw": "Praline multicolor",
+      "display": "Praline multicolor"
+    },
+    {
+      "raw": "Praline/antique gold/rose",
+      "display": "Praline/antique gold/rose"
+    },
+    {
+      "raw": "Praline/antique silver",
+      "display": "Praline/antique silver"
+    },
+    {
+      "raw": "Praline/gold/azzurro",
+      "display": "Praline/gold/light blue"
+    },
+    {
+      "raw": "Praline/green",
+      "display": "Praline/green"
+    },
+    {
+      "raw": "Praline/lavanda",
+      "display": "Praline/lavender"
+    },
+    {
+      "raw": "Praline/silver",
+      "display": "Praline/silver"
+    },
+    {
+      "raw": "Praline/silver/dirty sage",
+      "display": "Praline/silver/dirty sage"
+    },
+    {
+      "raw": "Praline/silver/rose",
+      "display": "Praline/silver/rose"
+    },
+    {
+      "raw": "Prism violet",
+      "display": "Prism violet"
+    },
+    {
+      "raw": "Purple orchid",
+      "display": "Purple orchid"
+    },
+    {
+      "raw": "Reddish grey",
+      "display": "Reddish grey"
+    },
+    {
+      "raw": "Rose",
+      "display": "Rose"
+    },
+    {
+      "raw": "Rose beige/multicolor",
+      "display": "Rose beige/multicolor"
+    },
+    {
+      "raw": "Rose beige/silver",
+      "display": "Rose beige/silver"
+    },
+    {
+      "raw": "Rose clay/silver",
+      "display": "Rose clay/silver"
+    },
+    {
+      "raw": "Rose mist/silver",
+      "display": "Rose mist/silver"
+    },
+    {
+      "raw": "Rose/ antique silver",
+      "display": "Rose/ antique silver"
+    },
+    {
+      "raw": "Rose/silver",
+      "display": "Rose/silver"
+    },
+    {
+      "raw": "Rosso",
+      "display": "Red"
+    },
+    {
+      "raw": "Sable'/silver",
+      "display": "Sable/silver"
+    },
+    {
+      "raw": "Salmone",
+      "display": "Salmon"
+    },
+    {
+      "raw": "Sand/silver/multicolor",
+      "display": "Sand/silver/multicolor"
+    },
+    {
+      "raw": "Sandy rose/nero",
+      "display": "Sandy rose/black"
+    },
+    {
+      "raw": "Sierra/antique gold/multicolor",
+      "display": "Sierra/antique gold/multicolor"
+    },
+    {
+      "raw": "Silver",
+      "display": "Silver"
+    },
+    {
+      "raw": "Silver lilac",
+      "display": "Silver lilac"
+    },
+    {
+      "raw": "Silver/gold",
+      "display": "Silver/gold"
+    },
+    {
+      "raw": "Skin",
+      "display": "Skin"
+    },
+    {
+      "raw": "Skin+multicolor",
+      "display": "Skin+multicolor"
+    },
+    {
+      "raw": "Smog",
+      "display": "Smog"
+    },
+    {
+      "raw": "Summer pink",
+      "display": "Summer pink"
+    },
+    {
+      "raw": "Taffy/nero",
+      "display": "Taffy/black"
+    },
+    {
+      "raw": "Taffy/silver",
+      "display": "Taffy/silver"
+    },
+    {
+      "raw": "Toasted almond",
+      "display": "Toasted almond"
+    },
+    {
+      "raw": "Tortora/oro",
+      "display": "Taupe/gold"
+    },
+    {
+      "raw": "Vaniglia/gold/silver",
+      "display": "Vanilla/gold/silver"
+    },
+    {
+      "raw": "Vaniglia/nero",
+      "display": "Vanilla/black"
+    },
+    {
+      "raw": "Vanilla",
+      "display": "Vanilla"
+    },
+    {
+      "raw": "Vintage grey /silver",
+      "display": "Vintage grey /silver"
+    },
+    {
+      "raw": "Yellow mint",
+      "display": "Yellow mint"
+    }
+  ]
+}

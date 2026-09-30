@@ -79,53 +79,32 @@ export default function CookiePolicyPage() {
             use cookies and other tracking technologies for these purposes:
           </p>
 
-          {/* Tabella dal documento approvato. La prima colonna e' unita sulle
-              tre righe, come nell'originale. */}
+          {/* Tabella dal documento approvato: un'unica voce (Local Storage -
+              Wishlist). Stesso stile della tabella dei cookie. */}
           <div className="overflow-x-auto pt-4">
-            <table className="w-full min-w-[560px] border-collapse text-left">
+            <table className="w-full min-w-[480px] border-collapse text-left">
               <caption className="sr-only">Cookies used on this Website</caption>
               <thead>
                 <tr className="border-b border-black/15">
-                  {["Cookie Subgroup", "Cookies", "Purpose", "Cookies used", "Lifespan"].map(
-                    (heading) => (
-                      <th
-                        key={heading}
-                        scope="col"
-                        className="font-sans text-[10px] font-medium uppercase tracking-[0.1em] text-black py-2.5 pr-4 align-bottom"
-                      >
-                        {heading}
-                      </th>
-                    )
-                  )}
+                  {["Cookie Subgroup", "Cookies", "Cookies used", "Lifespan"].map((heading) => (
+                    <th
+                      key={heading}
+                      scope="col"
+                      className="font-sans text-[10px] font-medium uppercase tracking-[0.1em] text-black py-2.5 pr-4 align-bottom"
+                    >
+                      {heading}
+                    </th>
+                  ))}
                 </tr>
               </thead>
               <tbody className="font-sans text-[11px] md:text-[12px] text-black/75">
-                <tr className="border-b border-black/8">
-                  <th
-                    scope="row"
-                    rowSpan={3}
-                    className="font-normal text-black/75 py-3 pr-4 align-top"
-                  >
+                <tr>
+                  <th scope="row" className="font-normal text-black/75 py-3 pr-4 align-top">
                     *.valentino.com
                   </th>
-                  <td className="py-3 pr-4 align-top">Browser Language</td>
-                  <td className="py-3 pr-4 align-top">Default language</td>
+                  <td className="py-3 pr-4 align-top">Local Storage - Wishlist</td>
                   <td className="py-3 pr-4 align-top">First Party</td>
-                  <td className="py-3 pr-4 align-top">Session</td>
-                </tr>
-                <tr className="border-b border-black/8">
-                  <td className="py-3 pr-4 align-top">
-                    Operating system, browser type and version
-                  </td>
-                  <td className="py-3 pr-4 align-top">VCard download and QR code render</td>
-                  <td className="py-3 pr-4 align-top">First Party</td>
-                  <td className="py-3 pr-4 align-top">Session</td>
-                </tr>
-                <tr>
-                  <td className="py-3 pr-4 align-top">Viewport dimension</td>
-                  <td className="py-3 pr-4 align-top">Responsiveness app</td>
-                  <td className="py-3 pr-4 align-top">First Party</td>
-                  <td className="py-3 pr-4 align-top">Session</td>
+                  <td className="py-3 pr-4 align-top">Forever</td>
                 </tr>
               </tbody>
             </table>

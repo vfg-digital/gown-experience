@@ -31,6 +31,9 @@ export default function ImmersiveView({
   const [fading, setFading] = useState(false);
   const [showHint, setShowHint] = useState(true);
   const [showPill, setShowPill] = useState(true);
+  // Vero finche' esiste un'immagine sotto quella in vista: pilota la freccia
+  // giu' (che scompare sull'ultima immagine, come la pillola sull'ultima creazione).
+  const [hasNextImage, setHasNextImage] = useState(false);
 
   const currentProduct = products[currentProductIndex];
 
@@ -71,20 +74,63 @@ export default function ImmersiveView({
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [goNext, goPrev]);
 
-  // Hide pill when scrolled to bottom (info section)
+  // Misura la galleria: nasconde la pillola vicino al fondo (zona scheda) e
+  // stabilisce se c'e' un'immagine sotto a cui scorrere (freccia giu'). Le
+  // immagini portano l'attributo data-gallery-image (vedi GownPanel).
+  const measureGallery = useCallback(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const { scrollTop, scrollHeight, clientHeight } = container;
+    const nearBottom = scrollTop + clientHeight >= scrollHeight - 100;
+    setShowPill(!nearBottom);
+
+    const containerTop = container.getBoundingClientRect().top;
+    const images = container.querySelectorAll<HTMLElement>("[data-gallery-image]");
+    let next = false;
+    for (let i = 0; i < images.length; i++) {
+      // Immagine che inizia sotto il bordo alto del contenitore = c'e' ancora
+      // qualcosa a cui scorrere. La soglia evita di contare l'immagine corrente
+      // quando e' allineata al bordo.
+      if (images[i].getBoundingClientRect().top - containerTop > 8) {
+        next = true;
+        break;
+      }
+    }
+    setHasNextImage(next);
+  }, [containerRef]);
+
+  // Scorre dolcemente fino alla prima immagine che inizia sotto il bordo alto:
+  // rivela l'immagine successiva della galleria.
+  const scrollToNextImage = useCallback(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const containerTop = container.getBoundingClientRect().top;
+    const images = container.querySelectorAll<HTMLElement>("[data-gallery-image]");
+    for (let i = 0; i < images.length; i++) {
+      const relTop = images[i].getBoundingClientRect().top - containerTop;
+      if (relTop > 8) {
+        container.scrollTo({ top: container.scrollTop + relTop, behavior: "smooth" });
+        return;
+      }
+    }
+  }, [containerRef]);
+
+  // Ricalcola pillola e freccia allo scroll e a ogni cambio creazione (quando
+  // il layout delle nuove immagini e' pronto).
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    const handleScroll = () => {
-      const { scrollTop, scrollHeight, clientHeight } = container;
-      const nearBottom = scrollTop + clientHeight >= scrollHeight - 100;
-      setShowPill(!nearBottom);
-    };
-
+    const handleScroll = () => measureGallery();
     container.addEventListener("scroll", handleScroll, { passive: true });
-    return () => container.removeEventListener("scroll", handleScroll);
-  }, [containerRef, currentProductIndex]);
+    const raf = requestAnimationFrame(measureGallery);
+
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(raf);
+    };
+  }, [containerRef, currentProductIndex, measureGallery]);
 
   // Swipe detection (mobile) - horizontal only
   const touchStartX = useRef(0);
@@ -139,6 +185,21 @@ export default function ImmersiveView({
           total={products.length}
           showHint={showHint}
         />
+      )}
+
+      {/* Freccia giu': stesso cerchio e stessa freccia della pillola "turn the
+          pages", ma rivolta verso il basso. Scorre dolcemente all'immagine
+          successiva della galleria e scompare sull'ultima immagine. */}
+      {hasNextImage && (
+        <button
+          onClick={scrollToNextImage}
+          className="fixed bottom-6 right-4 z-40 w-[52px] h-[52px] flex items-center justify-center bg-white/80 backdrop-blur-sm rounded-full shadow-sm opacity-60 hover:opacity-100 transition-opacity"
+          aria-label="Immagine successiva"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="1.5">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
       )}
     </div>
   );

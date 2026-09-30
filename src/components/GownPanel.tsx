@@ -78,6 +78,9 @@ export default function GownPanel({
         return (
           <div
             key={`${product.sku}-${imagePath}`}
+            // Marca le immagini della galleria (non la scheda in fondo), cosi'
+            // la freccia giu' puo' scorrere fino alla successiva.
+            data-gallery-image
             className={`w-full relative ${isFirst ? "pt-[56px]" : ""} ${
               isDetail
                 ? "md:flex md:justify-center"

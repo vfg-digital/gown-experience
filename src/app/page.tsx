@@ -515,6 +515,15 @@ function AccessOverlay({ onAccessGranted }: { onAccessGranted: (name: string) =>
     }
   };
 
+  // La CTA anticipa il successo: appena il nome e' compilato e la chiave e'
+  // quella giusta, il pulsante diventa nero pieno con testo bianco (prima di
+  // premere), per invitare al click. Stesso criterio del submit, chiave
+  // case-insensitive. La chiave e' comunque gia' nota lato client, quindi non
+  // espone nulla di nuovo.
+  const isReady =
+    nameInput.trim() !== "" &&
+    accessInput.trim().toLowerCase() === "reverie058";
+
   return (
     <div className="text-left">
       <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl text-black font-normal leading-[0.9] mb-8">
@@ -587,8 +596,10 @@ function AccessOverlay({ onAccessGranted }: { onAccessGranted: (name: string) =>
             il tasto Invio continua a funzionare (form onSubmit). */}
         <button
           type="submit"
-          className={`w-full mt-8 min-h-[44px] py-3 flex items-center justify-center font-sans text-[12px] tracking-[0.15em] text-white/90 transition-colors ${
-            glowing ? "bg-[#252525]/75" : "bg-[#252525]/60 hover:bg-[#252525]/75"
+          className={`w-full mt-8 min-h-[44px] py-3 flex items-center justify-center font-sans text-[12px] tracking-[0.15em] transition-colors ${
+            isReady || glowing
+              ? "bg-black text-white"
+              : "bg-[#252525]/60 hover:bg-[#252525]/75 text-white/90"
           }`}
           aria-label="Enter"
         >
