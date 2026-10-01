@@ -39,3 +39,8 @@ next-env.d.ts
 
 .vercel
 .env*
+
+# artefatto di deploy statico: non va in git (supera il limite di 100 MB di GitHub).
+# Ancorato alla radice del repo (che e' GOWNS-DE-REVE), con slash.
+/reverie-static-site.zip
+*.zip
