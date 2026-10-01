@@ -3,8 +3,10 @@ import "./globals.css";
 import AdobeLaunch from "@/components/AdobeLaunch";
 import { WishlistProvider } from "@/context/WishlistContext";
 
-// Open Graph richiede URL assoluti.
-const siteUrl = "https://gowns-collection.vercel.app";
+// Open Graph richiede URL assoluti: metadataBase deve puntare al dominio reale
+// del deploy (progetto Vercel "gown-project"), altrimenti l'og:image viene
+// risolto su un host che non serve l'immagine e la preview resta senza foto.
+const siteUrl = "https://gown-project.vercel.app";
 
 const title = "Valentino Rêverie";
 const description = "A world of exceptional beauty, extraordinary creations and masterful craft.";

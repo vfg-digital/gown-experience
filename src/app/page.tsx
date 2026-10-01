@@ -33,6 +33,15 @@ export default function Home() {
   // o partire dall'alto (primo ingresso). Vedi highlightSku piu' sotto.
   const [selectedProductIndex, setSelectedProductIndex] = useState<number | null>(null);
   const [sharedSkus, setSharedSkus] = useState<string[]>([]);
+  // Filtro taglie del Gowns Closet. Vive qui (non in GridView) per sopravvivere
+  // all'apertura di una scheda: GridView si smonta e rimonterebbe senza filtro.
+  // Non entra nel calcolo del page_view, quindi non altera il tracking.
+  const [closetSizeFilter, setClosetSizeFilter] = useState<string[]>([]);
+  // Vero quando la scheda e' aperta dalla griglia del Closet: in quel caso le
+  // frecce seguono il filtro taglie. Falso quando si apre dalla wishlist, dove
+  // la navigazione resta su tutto il catalogo. E' separato da detailOrigin
+  // (che pilota il page_name) per non alterare il tracking.
+  const [detailUsesFilter, setDetailUsesFilter] = useState(false);
   // Vista da cui si e' aperta la wishlist, per far tornare il "back" esattamente
   // li'. La wishlist e' raggiungibile dalla stella dell'header su qualsiasi
   // schermata (Savoir-Faire, Gowns Closet, scheda), quindi la destinazione del
@@ -264,12 +273,15 @@ export default function Home() {
     pushHistory("menu");
   }, [pushHistory]);
 
-  const handleSelectProduct = useCallback((index: number) => {
+  // useFilter: true dalla griglia del Closet (frecce legate al filtro taglie),
+  // false dalla wishlist (navigazione su tutto il catalogo).
+  const handleSelectProduct = useCallback((index: number, useFilter = false) => {
     setSelectedProductIndex(index);
     setDetailProductIndex(index);
     setViewMode("gowns-book");
     // La scheda aperta da una card appartiene al ramo del Gowns Closet.
     setDetailOrigin("gowns-closet");
+    setDetailUsesFilter(useFilter);
     pushHistory("browsing", "gowns-book", "gowns-closet");
   }, [pushHistory]);
 
@@ -395,7 +407,13 @@ export default function Home() {
           {/* Logo */}
           <header className="absolute top-0 left-0 right-0 z-50 flex items-center justify-center h-14">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-valentino.svg" alt="Valentino" className="h-5 md:h-7 w-auto" />
+            <img
+              src="/logo-valentino-garavani.png"
+              alt="Valentino Garavani"
+              width={1032}
+              height={300}
+              className="h-9 md:h-10 w-auto"
+            />
           </header>
 
           {/* Solo sulla schermata di accesso, non sopra al video di
@@ -430,13 +448,20 @@ export default function Home() {
               initialProductIndex={selectedProductIndex ?? 0}
               scrollRef={scrollContainerRef}
               onProductChange={setDetailProductIndex}
+              // Dalla griglia filtrata le frecce seguono il filtro; dalla
+              // wishlist (useFilter=false) restano su tutto il catalogo.
+              filterSizes={detailUsesFilter ? closetSizeFilter : []}
             />
           )}
 
           {viewMode === "gowns-closet" && (
             <GridView
               products={products}
-              onSelectProduct={handleSelectProduct}
+              // true: la scheda aperta dalla griglia naviga nel sottoinsieme
+              // filtrato (se un filtro e' attivo).
+              onSelectProduct={(index) => handleSelectProduct(index, true)}
+              appliedSizes={closetSizeFilter}
+              onApplySizes={setClosetSizeFilter}
               highlightSku={
                 selectedProductIndex != null
                   ? products[selectedProductIndex]?.sku

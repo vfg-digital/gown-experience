@@ -101,13 +101,18 @@ export default function Header({
         </button>
       )}
 
-      {/* Logo - CENTER (invariato: porta al menu principale) */}
+      {/* Logo - CENTER (porta al menu principale). Logo Valentino Garavani su
+          due righe (rapporto 3.44:1): h-9 su mobile mantiene la larghezza del
+          vecchio logo, md:h-10 resta dentro l'header da 56px. "block" evita lo
+          spazio della linea di base sotto l'immagine, cosi' resta centrato. */}
       <button onClick={onGoHome} className="absolute left-1/2 -translate-x-1/2">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/logo-valentino.svg"
-          alt="Valentino"
-          className="h-5 md:h-7 w-auto"
+          src="/logo-valentino-garavani.png"
+          alt="Valentino Garavani"
+          width={1032}
+          height={300}
+          className="block h-9 md:h-10 w-auto"
         />
       </button>
 

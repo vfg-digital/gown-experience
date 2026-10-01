@@ -41,7 +41,13 @@ export default function MenuScreen({
       {/* Logo */}
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center h-14">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo-valentino.svg" alt="Valentino" className="h-5 md:h-7 w-auto" />
+        <img
+          src="/logo-valentino-garavani.png"
+          alt="Valentino Garavani"
+          width={1032}
+          height={300}
+          className="h-9 md:h-10 w-auto"
+        />
       </header>
 
       {/* Content - centered vertically */}

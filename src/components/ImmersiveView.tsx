@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useCallback, useEffect } from "react";
+import React, { useRef, useState, useCallback, useEffect, useMemo } from "react";
 import { Product } from "@/data/products";
 import GownNavPill from "@/components/GownNavPill";
 import GownPanel from "@/components/GownPanel";
@@ -11,6 +11,13 @@ interface ImmersiveViewProps {
   scrollRef?: React.MutableRefObject<HTMLDivElement | null>;
   /** Notifica quale creazione e' a schermo, per il tracking della scheda. */
   onProductChange?: (index: number) => void;
+  /**
+   * Taglie del filtro attivo del Gowns Closet. Quando valorizzato, le frecce
+   * (e il contatore) si muovono solo tra le creazioni che hanno almeno una di
+   * queste taglie, cioe' lo stesso sottoinsieme mostrato nella griglia. Vuoto
+   * o assente = navigazione su tutto il catalogo (comportamento originale).
+   */
+  filterSizes?: string[];
 }
 
 /**
@@ -24,6 +31,7 @@ export default function ImmersiveView({
   initialProductIndex = 0,
   scrollRef,
   onProductChange,
+  filterSizes,
 }: ImmersiveViewProps) {
   const internalRef = useRef<HTMLDivElement | null>(null);
   const containerRef = scrollRef || internalRef;
@@ -36,6 +44,25 @@ export default function ImmersiveView({
   const [hasNextImage, setHasNextImage] = useState(false);
 
   const currentProduct = products[currentProductIndex];
+
+  // Indici (nell'array completo) delle creazioni navigabili: tutte, oppure solo
+  // quelle che rispettano il filtro taglie. currentProductIndex resta sempre un
+  // indice sull'array completo, cosi' il tracking della scheda non cambia; qui
+  // ci si limita a saltare da un indice ammesso al successivo.
+  const allowedIndices = useMemo(() => {
+    if (!filterSizes || filterSizes.length === 0) {
+      return products.map((_, i) => i);
+    }
+    const out: number[] = [];
+    products.forEach((p, i) => {
+      if (p.sizes.some((size) => filterSizes.includes(size))) out.push(i);
+    });
+    // Difensivo: se il filtro non seleziona nulla si torna a tutto il catalogo,
+    // per non lasciare le frecce senza destinazioni.
+    return out.length > 0 ? out : products.map((_, i) => i);
+  }, [products, filterSizes]);
+
+  const positionInAllowed = allowedIndices.indexOf(currentProductIndex);
 
   // Segnala la creazione a schermo a chi si occupa del tracking.
   useEffect(() => {
@@ -61,8 +88,19 @@ export default function ImmersiveView({
     [products.length, containerRef]
   );
 
-  const goNext = useCallback(() => goToProduct(currentProductIndex + 1), [currentProductIndex, goToProduct]);
-  const goPrev = useCallback(() => goToProduct(currentProductIndex - 1), [currentProductIndex, goToProduct]);
+  // Avanti/indietro nel sottoinsieme ammesso. Se per qualche motivo la creazione
+  // corrente non vi appartiene (fallback), si usa il passo semplice ±1.
+  const goNext = useCallback(() => {
+    const pos = allowedIndices.indexOf(currentProductIndex);
+    if (pos === -1) return goToProduct(currentProductIndex + 1);
+    if (pos < allowedIndices.length - 1) goToProduct(allowedIndices[pos + 1]);
+  }, [allowedIndices, currentProductIndex, goToProduct]);
+
+  const goPrev = useCallback(() => {
+    const pos = allowedIndices.indexOf(currentProductIndex);
+    if (pos === -1) return goToProduct(currentProductIndex - 1);
+    if (pos > 0) goToProduct(allowedIndices[pos - 1]);
+  }, [allowedIndices, currentProductIndex, goToProduct]);
 
   // Keyboard navigation (desktop)
   useEffect(() => {
@@ -181,8 +219,11 @@ export default function ImmersiveView({
         <GownNavPill
           onPrev={goPrev}
           onNext={goNext}
-          currentIndex={currentProductIndex}
-          total={products.length}
+          // Posizione e totale riferiti al sottoinsieme navigabile, cosi' il
+          // contatore e la disattivazione delle frecce agli estremi seguono il
+          // filtro.
+          currentIndex={positionInAllowed >= 0 ? positionInAllowed : 0}
+          total={allowedIndices.length}
           showHint={showHint}
         />
       )}

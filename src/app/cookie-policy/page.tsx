@@ -22,7 +22,13 @@ export default function CookiePolicyPage() {
           quindi non serve navigazione verso il resto del sito. */}
       <header className="flex items-center justify-center h-14 border-b border-black/5">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo-valentino.svg" alt="Valentino" className="h-5 md:h-7 w-auto" />
+        <img
+          src="/logo-valentino-garavani.png"
+          alt="Valentino Garavani"
+          width={1032}
+          height={300}
+          className="h-9 md:h-10 w-auto"
+        />
       </header>
 
       <article className="max-w-2xl mx-auto px-6 md:px-10 py-12 md:py-16">
