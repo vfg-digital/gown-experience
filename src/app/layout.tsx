@@ -5,10 +5,8 @@ import { WishlistProvider } from "@/context/WishlistContext";
 
 // Dominio ufficiale di produzione. Open Graph e canonical richiedono URL
 // assoluti: metadataBase deve puntare qui, cosi' og:image, og:url e canonical
-// vengono risolti su questo host. Il sottodominio accentato viene normalizzato
-// automaticamente in punycode (xn--rverie-iva.valentino.com) nelle URL emesse,
-// forma ASCII valida ovunque.
-const siteUrl = "https://rêverie.valentino.com";
+// vengono risolti su questo host.
+const siteUrl = "https://reverie.valentino.com";
 
 const title = "Valentino Rêverie";
 const description = "A world of exceptional beauty, extraordinary creations and masterful craft.";
@@ -34,7 +32,7 @@ export const metadata: Metadata = {
     title,
     description,
     siteName: title,
-    // Risolto su metadataBase -> https://xn--rverie-iva.valentino.com/
+    // Risolto su metadataBase -> https://reverie.valentino.com/
     url: "/",
     type: "website",
     locale: "en_US",

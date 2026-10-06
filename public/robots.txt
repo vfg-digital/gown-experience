@@ -1,4 +1,4 @@
-# rêverie.valentino.com - esperienza privata ad accesso riservato.
+# reverie.valentino.com - esperienza privata ad accesso riservato.
 # Non deve essere scansionata ne' indicizzata dai motori di ricerca.
 User-agent: *
 Disallow: /
